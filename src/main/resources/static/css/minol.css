@@ -1,0 +1,4164 @@
+/* Reset */
+@import url("reset.css");
+
+.mo {display:none !important;}  /* PC모드에서는 mo 클래스를 모두 보여주지 않음 */
+
+.mt10 {margin-top:10px;}
+.mt15 {margin-top:15px;}
+.mt20 {margin-top:20px;}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* 상단메뉴 */
+header {
+	display:flex;
+	justify-content: space-around;
+}
+nav {
+	display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+    justify-content: space-between;
+}
+
+.dim {
+	display: none;
+}
+.dim.on {
+	position: fixed;
+	display: block;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,0.7);
+	z-index: 1000;
+}
+.dim-products {
+	display: none;
+}
+.dim-products.on {
+	position: fixed;
+	display: block;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background: #eefbff;
+	z-index: 1000;
+}
+.header-wrap {
+    width:1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#headerMenu {
+	position:fixed;
+	width: 100%;
+	top:0;
+	left:0;
+	z-index: 1000;
+    background: rgba(0,0,0, 0.3);
+    padding:15px 0;
+}
+#headerMenu h1 {
+	display: flex;
+	font-size: 2em;
+    align-items: center;
+}
+#headerMenu li {
+	display:inline-block;
+	margin: 10px;
+}
+#headerMenu li a {
+	text-decoration:none;
+    font-size:16px;
+	color: #fff;
+}
+#headerMenu li a, #headerMenu li a,
+#headerMenu li.active a {
+	padding: 9px 18px;
+	display:block;
+}
+#headerMenu p a {
+    padding:0 20px;
+    color:#fff;
+}
+/* 메인배너 */
+.main-banner-wrap {
+    position: relative;
+    width:100vw;
+    height:100vh;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-banner img {
+    width:100vw;
+    height:100vh;
+}
+
+/* 2023-04-29 : 메인배너 play/pause버튼 위치수정 */
+.btn-playpause-wrap {
+    position:absolute;
+    width:24px;
+    bottom:107px;
+    left:calc(50% - 460px);
+    z-index:99;
+}
+.btn-playpause {
+    position: relative;
+    height:24px;
+}
+.btn-playpause button {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    width:24px;
+    height:24px;
+    border:none;
+    background: url('../img/btn-playpause.png') no-repeat center 0;
+}
+.btn-playpause button.on {
+    background: url('../img/btn-playpause.png') no-repeat center -24px;
+}
+
+/* 2023-04-29 : 메인배너 pagination 위치수정 */
+.main-banner .swiper-pagination {
+    position: absolute;
+    left: calc(50% - 600px);
+    bottom: 105px;
+    width: 130px;
+    height: 30px;
+}
+
+.main-banner .swiper-pagination span {
+    display: inline-block;
+    margin:0 4px !important;
+}
+.main-banner .swiper-pagination-bullet {
+    width: 16px;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff ;
+    opacity: 0.5;
+}
+.main-banner .swiper-pagination-bullet-active {
+    width: 74px;
+    background: #ccc;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    position: relative;
+}
+
+.swiper-pagination-bullet {font-size:0;}
+.swiper-pagination-bullet-active span.progress {
+    width:0;
+    height:4px;
+    position: absolute;
+    background: #fff;
+    top:0;
+    left:0;
+    border-radius: 4px;
+    animation: mainBanner-pager 4s ease-in-out;
+    opacity: 1;
+    margin:0 !important;
+}
+
+@keyframes mainBanner-pager {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+
+.main-banner .swiper-button-next,
+.main-banner .swiper-button-prev {
+    display: none;
+}
+.scrolldown-wrap {
+    position: relative;
+    width:100%;
+}
+.scrolldown-wrap .scrolldown {
+    position:absolute;
+    bottom:80px;
+    left:50%;
+    width:40px;
+    height:65px;
+    border:2px #fff solid;
+    border-radius: 50px;
+    transform: translate(-50%);
+    z-index: 50;
+    cursor: pointer;
+    
+}
+.scrolldown-wrap .scrolldown .arrow {
+    position:absolute;
+    top:20%;
+    left:0;
+    transform: translate(-50%);
+    width:100%;
+    height:100%;
+    text-align: center;
+    animation: mouse-ani 2s infinite ease-in-out;
+
+}
+@keyframes mouse-ani {
+    0% {transform: translateY(0%);}
+   50% {transform: translateY(30%);}
+  100% {transform: translateY(0%);}
+}
+
+/* 미놀의 역사 */
+.history-wrap {
+    position: relative;
+    width:1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+}
+.history-wrap h2 {
+    font-size:40px;
+    font-weight: 400;
+    color:#0089cf;
+    letter-spacing:-3px;
+    line-height: 90%;
+    text-align: center;
+}
+.history-wrap h2 span {
+    font-size:24px;
+    color:#4c4c4c;
+    letter-spacing:-1px;
+}
+.history-wrap .history {
+    margin:20px 0;
+}
+.history-wrap .history  {
+    display: flex;
+    align-items: center;
+}
+.history-wrap .productImg {
+    display: flex;
+    width:450px;
+    align-items: center;
+    justify-content: center;    
+}
+.history-wrap .productImg > img{
+    transform: scale(0.9);
+    width: min-content;
+    height: min-content;
+}
+
+.history-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+.history-tab ul {
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+}
+.history-tab ul li {
+    padding:1rem;
+    text-align:center;
+}
+.history-tab ul li a {
+    color:#c5c5c5;
+    font-size:24px;
+}
+.history-tab ul li.on a {
+    color:#0089cf
+}
+.history-tab ul li a span {
+    font-size:16px;
+}
+.script-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height:300px;
+}
+.script-wrap dl {
+    width:680px;
+    text-align: left;
+    line-height: 180%;
+    letter-spacing: -1px;
+}
+.script-wrap dl dt {
+    font-size:28px;
+    margin-bottom: 35px;
+    color:#000;
+}
+.script-wrap dl dd {
+    font-size:20px;
+    color:#4c4c4c;
+}
+.tab-progressive {
+    position: relative;
+    width:100%;
+    margin-top:20px;
+}
+.tab-progressive span.circle {
+    position: absolute;
+    top:-21px;
+    left:95px;
+    z-index: 99;
+    transition: all 0.7s ease-in-out;
+}
+
+.tab-progressive .bar {
+    position: relative;
+    width:100%;
+    height:2px;
+    background: #c5c5c5;
+    overflow:hidden;
+}
+.tab-progressive .bar span {
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    width: 10%;
+    height:2px;
+    background: #0089cf;
+    transition: all 0.7s ease-in-out;
+}
+
+
+/* 모든 미놀 제품 알아보기 */
+.product-banner-wrap {
+    position: relative;
+    width:100%;
+    margin:0 auto;
+    background:#f2f9fd;
+    overflow: hidden;
+    transition: all 1s;
+}
+.product-banner-wrap h2 {
+    position: relative;
+    font-size:40px;
+    font-weight: 400;
+    text-align:center;
+    letter-spacing: -1px;
+    margin:25px 0;
+    z-index: 2;
+}
+.product-banner-wrap .circle1 {
+    position: absolute;
+    bottom:-210px;
+    left:-180px;
+    width:620px;
+    height:620px;
+    background: #e6f5fb;
+    -webkit-mask-image: url('../img/circle1.png');
+    mask-image: url('../img/circle1.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    z-index: 1;
+    transition: all 1s;
+    animation: topdown 8s infinite ease-in-out;
+}
+@keyframes topdown {
+    0% {transform: translate(0, 0%);}
+    50% {transform: translate(-20%, 20%);}
+    100% {transform: translate(0, 0%);}
+}
+.product-banner-wrap .circle2 {
+    position: absolute;
+    top:100px;
+    right:-20px;
+    width:274px;
+    height:274px;
+    background: #e6f5fb;
+    -webkit-mask-image: url('../img/circle2.png');
+    mask-image: url('../img/circle2.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    z-index: 1;
+    transition: all 1s;
+    animation: leftRight 8s infinite ease-in-out;
+}
+@keyframes leftRight {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(50%, -50%);}
+    100% {transform: translate(0, 0);}
+}
+.product-banner {
+    width:1200px;
+    margin:0 auto;
+    padding:30px 0;
+}
+.product-banner .swiper-slide {
+    width:400px !important;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:#fff;
+    transform: scale(0.5);
+    border-radius: 50%;
+    transition: all 0.7s ease-out;
+}
+.product-banner .swiper-slide p.title, .product-banner .swiper-slide span, .product-banner .swiper-slide p.desc {
+    display:none;
+}
+.product-banner .swiper-slide-active p.title {
+    font-size:22px;
+    letter-spacing: -1px;
+}
+.product-banner .swiper-slide-active p.title span {
+    font-size:16px;
+}
+.product-banner .swiper-slide-active p.title, .product-banner .swiper-slide-active p.desc {
+    display: block;
+    color:#fff;
+}
+.product-banner .swiper-slide p.title {
+    display: none;
+}
+.product-banner .swiper-slide p.taste {
+    display: none;
+}
+
+/* 활성화 된 미놀맛별 텍스트 색상 */
+.product-banner .swiper-slide-active p.taste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:108px;
+    height:30px;
+    margin-bottom:10px;
+    background: #fff;
+    border-radius: 50px;
+}
+.product-banner .product1.swiper-slide-active p.taste {display:flex; color:#00a1dd;}
+.product-banner .product2.swiper-slide-active p.taste {display:flex; color:#ffa417;}
+.product-banner .product3.swiper-slide-active p.taste {display:flex; color:#ef889f;}
+
+.product-banner .swiper-slide-active p.product {
+    margin-bottom:10px;
+    transform: scale(0.9);
+}
+.product-banner .swiper-slide p.desc {
+    width:200px;
+    font-size:16px;
+    line-height: 140%;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.product-banner .swiper-slide-active p.desc {
+    font-size:16px;
+}
+.product-banner .swiper-slide-active p.title {
+    display: block;
+    font-size:22px;
+    margin-bottom:10px;
+}
+.product-banner .swiper-slide-active {
+    transform: scale(1);
+}
+.product-banner .product1.swiper-slide-active {background:#00a1dd;}
+.product-banner .product2.swiper-slide-active {background:#ffa417;}
+.product-banner .product3.swiper-slide-active {background:#ef889f;}
+.product-banner .product4.swiper-slide-active {background:#e4443b;}
+.product-banner .product5.swiper-slide-active {background:#0072e3;}
+.product-banner .product6.swiper-slide-active {background:#57c4df;}
+
+.product-banner .product-button-prev, .product-banner .product-button-next {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:13px;
+    height:23px;
+    background: url('../img/bg-circle-arrow.png') no-repeat;
+    z-index: 90;
+    cursor: pointer;
+}
+.product-banner .product-button-prev {
+    background-position: 0 0;
+    left:calc(50% - 150px);
+}
+.product-banner .product-button-next {
+    background-position: -13px 0;
+    left:calc(50% + 150px);
+}
+
+
+/* 미놀 제품 - 목 아플 때 효과 빠른 미놀 에프트로키 */
+.product1-wrap {
+    position: relative;
+    width:100vw;
+    height:100%;
+ }
+.product1-wrap .title {
+    position: absolute;
+    width:50%;
+    top:190px;
+    left:50%;
+    z-index: 95;
+    transform: translate(-50%);
+    color:#fff;
+    letter-spacing: -1px;
+    text-align: center;
+}
+.product1-wrap .title p {
+    font-size:28px;
+    letter-spacing: -1px;
+    font-weight: 300;
+    margin-bottom:11px;
+}
+.product1-wrap .title h2 {
+    font-size:40px;
+    font-weight: 400;
+    margin-bottom:25px;
+}
+.product1-wrap .title h2 span {
+    font-size:24px;
+    display: block;
+    margin-bottom:10px;
+}
+.product1-wrap .title h3 {
+    font-size:16px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 160%;
+    margin-bottom:35px;
+}
+.product1-wrap>ul {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.product1-wrap>ul>li {
+    width:33.3%;
+    height:100vh;
+    overflow: hidden;
+}
+
+/* 자세히보기, Q&A버튼 */
+.minol-wrap>ul {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin:15px 0;
+}
+.minol-wrap>ul>li {margin:0 5px;}
+.minol-wrap>ul>li>a {
+    display: block;
+    width:140px;
+    background: #fff;
+    color: #0089cf;
+    font-size:16px;
+    font-weight: 400;
+    border-radius: 50px;
+    border: 1px transparent;
+    padding: 10px 20px;
+    letter-spacing: -1px;
+}
+.minol-wrap>ul>li>a.on, .minol-wrap>ul>li>a:hover {
+    background:#0089cf;
+    border:1px #fff solid;
+    color:#fff;
+}
+
+.product1-pop1 {
+    padding-top:40px;
+}
+
+/* 미놀 애니메이션 */
+.product1-wrap>ul>li:nth-of-type(1) {
+    position:relative;
+    background:#ffa417;
+}
+.product1-wrap>ul>li:nth-of-type(2) {
+    position:relative;
+    background:#00a1dd;
+}
+.product1-wrap>ul>li:nth-of-type(3) {
+    position:relative;
+    background:#ef889f;
+}
+.minol-wrap {
+    position: relative;
+    width:100%;
+}
+.ani-part {
+    position: relative;
+}
+.ani-part>div {
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.minol-orange {position: absolute;bottom:-500px;left:50%;z-index: 90;transform: translate(-50%) scale(1); transition: 0.5s all ease-out;}
+.minol-mint {position: absolute;bottom:-500px;left:50%;z-index: 90;transform: translate(-50%) scale(1); transition: 0.7s all ease-out;}
+.minol-peach {position: absolute;bottom:-500px;left:50%;z-index: 90;transform: translate(-50%) scale(1); transition: 0.9s all ease-out;}
+
+.minol-orange.on {position: absolute;bottom:-20px;left:50%;z-index: 90;transform: translate(-50%) scale(1);}
+.minol-mint.on {position: absolute;bottom:-20px;left:50%;z-index: 90;transform: translate(-50%) scale(1);}
+.minol-peach.on {position: absolute;bottom:-20px;left:50%;z-index: 90;transform: translate(-50%) scale(1);}
+
+
+.orange1 {
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    transform: rotate(355deg);
+    animation: orange-ani1 15s infinite ease-in-out;
+}
+.orange2 {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: rotate(246deg);
+    animation: orange-ani2 15s infinite ease-in-out;
+}
+.orange3 {
+    position: absolute;
+    top: 740px;
+    left: 270px;
+    transform: rotate(282deg);
+    animation: orange-ani3 15s infinite ease-in-out;
+}
+
+@keyframes orange-ani1 {
+    0% {transform: translateY(0%);}
+   50% {transform: translateY(20%);}
+  100% {transform: translateY(0%);}
+}
+@keyframes orange-ani2 {
+    0% {transform: translateY(0%) rotate(0deg);}
+   50% {transform: translateY(10%) rotate(-10deg);}
+  100% {transform: translateY(0%) rotate(0deg);}
+}
+@keyframes orange-ani3 {
+    0% {transform: translateY(0%) rotate(0);}
+   50% {transform: translateY(20%) rotate(10deg);}
+  100% {transform: translateY(0%) rotate(0);}
+}
+
+.leaf1 {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    transform: rotate(0deg);
+    animation: leaf-ani1 15s infinite ease-in-out;
+}
+.leaf2 {
+    position: absolute;
+    top: 430px;
+    left: 20%;
+    transform: rotate(159deg);
+    animation: leaf-ani2 15s infinite ease-in-out;
+}
+.leaf3 {
+    position: absolute;
+    bottom:20px;
+    left:190px;
+    animation: leaf-ani3 15s infinite ease-in-out;
+}
+@keyframes leaf-ani1 {
+    0% {transform: translateX(0%);}
+   50% {transform: translateX(10%);}
+  100% {transform: translateX(0%);}
+}
+@keyframes leaf-ani2 {
+    0% {transform: translateY(0%) rotate(0deg);}
+   50% {transform: translateY(10%) rotate(-5deg);}
+  100% {transform: translateY(0%) rotate(0deg);}
+}
+@keyframes leaf-ani3 {
+    0% {transform: translateY(0%) rotate(0);}
+   50% {transform: translateY(20%) rotate(10deg);}
+  100% {transform: translateY(0%) rotate(0);}
+}
+
+
+.peach1 {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    animation: peach-ani1 15s infinite ease-in-out;
+}
+.peach2 {
+    position: absolute;
+    top: 50px;
+    left: 70%;
+    animation: peach-ani2 15s infinite ease-in-out;
+}
+.peach3 {
+    position: absolute;
+    bottom:0;
+    left:-190px;
+    animation: peach-ani3 15s infinite ease-in-out;
+}
+@keyframes peach-ani1 {
+    0% {transform: translateY(0%) rotate(0);}
+   50% {transform: translateY(10%) rotate(0);}
+  100% {transform: translateY(0%) rotate(0);}
+}
+@keyframes peach-ani2 {
+    0% {transform: translateY(0%) rotate(0deg);}
+   50% {transform: translateY(10%) rotate(-35deg);}
+  100% {transform: translateY(0%) rotate(0deg);}
+}
+@keyframes peach-ani3 {
+    0% {transform: translateY(0%) rotate(0);}
+   50% {transform: translateY(20%) rotate(10deg);}
+  100% {transform: translateY(0%) rotate(0);}
+}
+
+
+/* 나에게 딱 필요한 미놀 제품 찾기 */
+.product-find-wrap {
+    position: relative;
+    width:100%;
+    margin:0 auto;
+    background: #f2f9fd;
+}
+.product-find {
+    position: relative;
+    width:1200px;
+    margin:0 auto;
+    letter-spacing: -1px;
+}
+.product-find h2 {
+    text-align: center;
+    font-size:40px;
+    font-weight: 400;
+    color:#262626;
+    margin-bottom:20px;
+}
+.product-find h3 {
+    color:#4c4c4c;
+    text-align:center;
+    font-size:24px;
+    font-weight: 400;
+}
+.product-find .type {
+    padding-top:140px;
+    pointer-events: auto;
+}
+.product-find .type>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.product-find .btn-back {
+    position:absolute;
+    top:0;
+    left:0;
+    width:20px;
+    height:40px;
+    display: block;
+    background: url('../img/btn-back-arrow.png') 0 0 no-repeat;
+}
+.product-find .type>ul>li {
+    position:relative;
+    width:280px;
+    height:291px;
+    cursor: pointer;
+    margin:0 40px;
+}
+.product-find .type>ul>li:nth-of-type(1) {background:url('../img/bg-neck.png') no-repeat 0 0;}
+.product-find .type>ul>li:hover:nth-of-type(1), .product-find .type ul>li.on:nth-of-type(1) {background-position: -280px 0;}
+.product-find .type>ul>li:nth-of-type(2) {background:url('../img/bg-noise.png') no-repeat 0 0;}
+.product-find .type>ul>li:hover:nth-of-type(2), .product-find .type ul>li.on:nth-of-type(2) {background-position: -280px 0;}
+.product-find .type>ul>li:nth-of-type(3) {background:url('../img/bg-mouse.png') no-repeat 0 0;}
+.product-find .type>ul>li:hover:nth-of-type(3), .product-find .type ul>li.on:nth-of-type(3) {background-position: -280px 0;}
+
+.product-find .type>ul>li>a {
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:160px;
+    height:40px;
+    color:#4c4c4c;
+    transform: translateX(-50%);
+    text-align: center;
+    padding:10px 0;
+}
+.product-find .type>ul>li.on>a, .product-find .type>ul>li:hover a {
+    color:#fff;
+}
+
+.neck-wrap, .noise-wrap, .mouse-wrap2 {
+    display: none;
+    pointer-events: auto;
+}
+
+/* 목 */
+.product-find .neck .button {
+    position: relative;
+    display: flex;
+    width: 790px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.product-find .neck .button>li {
+    margin:10px;
+}   
+.product-find .neck .button>li>a {
+    display:block;
+    width:200px;
+    border:1px #4c4c4c solid;
+    border-radius:50px;
+    background: #fff;
+    padding:11px 0; 
+    text-align: center;
+}
+.product-find .neck .button>li>a:hover, .product-find .neck .button>li>a.on {
+    background:#0089cf;
+    color:#fff;
+    border: 1px transparent;
+}
+.product-find .neck {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width:1200px;
+    padding:20px 0;
+    top:224px;
+    left:100px;
+    background: #f2f9fd;
+    padding:0 0 10px 0;
+}
+.product-find .neck .btn-back {
+    position:absolute;
+    display:block;
+    top:45%;
+    left:-50px;
+    width:20px;
+    height:40px;
+    transform: translate(-50%);
+}
+.product-find .neck .illust {
+    width: 280px;
+    height: 291px;
+    padding-bottom:14px;
+    background: url('../img/bg-neck.png') -280px 0 no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 코 */
+.product-find .noise .button {
+    position: relative;
+    display: flex;
+    width: 655px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.product-find .noise .button>li {
+    margin:10px;
+}   
+.product-find .noise .button>li>a {
+    display:block;
+    width:200px;
+    border:1px #4c4c4c solid;
+    border-radius:50px;
+    background: #fff;
+    padding:11px 0; 
+    text-align: center;
+}
+.product-find .noise .button>li>a:hover, .product-find .noise .button>li>a.on {
+    background:#0089cf;
+    color:#fff;
+    border: 1px transparent;
+}
+.product-find .noise {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width:1200px;
+    top:224px;
+    left:100px;
+    background: #f2f9fd;
+    padding:0 0 10px 0;
+}
+.product-find .noise .btn-back {
+    position:absolute;
+    display:block;
+    top:45%;
+    left:-50px;
+    width:20px;
+    height:40px;
+    transform: translate(-50%);
+}
+.product-find .noise .illust {
+    width: 280px;
+    height: 291px;
+    padding-bottom:14px;
+    background: url('../img/bg-noise.png') -280px 0 no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 입 */
+.product-find .mouse-care .button {
+    position: relative;
+    display: flex;
+    width: 790px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.product-find .mouse-care .button>li {
+    margin:10px;
+}   
+.product-find .mouse-care .button>li>a {
+    display:block;
+    width:200px;
+    border:1px #4c4c4c solid;
+    border-radius:50px;
+    background: #fff;
+    padding:11px 0; 
+    text-align: center;
+}
+.product-find .mouse-care .button>li>a:hover, .product-find .mouse-care .button>li>a.on {
+    background:#0089cf;
+    color:#fff;
+    border: 1px transparent;
+}
+.product-find .mouse-care {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width:1200px;
+    top:224px;
+    left:100px;
+    background: #f2f9fd;
+    padding:0 0 10px 0;
+}
+.product-find .mouse-care .btn-back {
+    position:absolute;
+    display:block;
+    top:45%;
+    left:-50px;
+    width:20px;
+    height:40px;
+    transform: translate(-50%);
+}
+.product-find .mouse-care .illust {
+    width: 280px;
+    height: 291px;
+    padding-bottom:14px;
+    background: url('../img/bg-mouse.png') -280px 0 no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* 제품찾기 결과 */
+.popup .title-btn {
+    display: block;
+    width: 200px;
+    height:40px;
+    border: 1px transparent;
+    border-radius: 50px;
+    background: #0089cf;
+    color:#fff;
+    padding: 11px 0;
+    text-align: center;
+    margin:140px auto 80px;
+}
+.popup .popup-product-wrap {width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;padding-top:75px;}
+.popup .popup-product-wrap .dl-wrap {display: flex;flex-wrap: nowrap;flex-direction: row;align-items: center;justify-content: center;}
+.popup .popup-product-wrap .product-recommand {
+    width: 360px;
+    height: 420px;
+    border: 1px #4c4c4c solid;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:20px 30px 45px 30px;
+    margin:0 12px;
+}
+.popup .popup-product-wrap .product-recommand .product-img {min-height:230px;display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.popup .popup-product-wrap dl {margin:20px 0;}
+.popup .popup-product-wrap dl>dd {font-size: 16px;line-height: 150%;letter-spacing: -1px;color: #4c4c4c;margin-top: 20px;}
+.popup .popup-product-wrap dl>dt {font-size:24px;color:#000;}
+.popup .popup-product-wrap table {width:100%;margin-bottom:23px;}
+.popup .popup-product-wrap table td {text-align: left;line-height: 120%;}
+
+
+/* 미놀 제품 - 자세히 보기 */
+.popup-products .popup-product1-wrap {
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:100%;
+    transform: translate(-50%, -50%);
+    padding:0 1.250rem;
+}
+.popup-products .popup-product1-wrap h2 {
+    width:100%;
+    text-align: center;
+}
+.popup-products .popup-product1-wrap table {
+    width:530px;
+    font-weight: 200;
+    font-size:14px;
+    margin-bottom:0;
+    overflow-y: auto;
+    min-height:500px;
+    margin:0 10px;
+}
+.popup-products .popup-product1-wrap table th {
+    color:#333;
+    font-weight: 300;
+    letter-spacing: -1px;
+    vertical-align: middle;
+    border:1px #ccc solid;
+    border-right:0;
+    height: 125px;
+}
+.popup-products .popup-product1-wrap table th span.small {
+    font-size:12px;
+}
+.popup-products .popup-product1-wrap table td {
+    width:190px;
+    text-align: left;
+    line-height: 150%;
+    font-weight: 300;
+    color:#333;
+    letter-spacing:-1px;
+    vertical-align: middle;
+    border:1px #ccc solid;
+    padding-left:15px;
+    height: 125px;
+}
+.popup-products .popup-product1-wrap table td span {
+    font-weight: 400;
+    color:#4c4c4c;
+}
+.popup-products .popup-product1-wrap table td span.small {
+    font-size:12px;
+    font-weight: 300;
+    color:#4c4c4c;
+}
+.popup-products .popup-product1-wrap table td span.sub-txt {
+    font-size:14px;
+    font-weight: 300;
+    color:#878787;
+}
+.popup-products .popup-product1-wrap table td ul>li.indent {
+    text-indent:-8px;
+    padding-left:7px;
+}
+.popup-products .popup-product1-wrap a.btn-file-down {
+    position: fixed;
+    bottom:-150px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    width:160px;
+    height:40px;
+    border-radius: 50px;
+    color:#f2f2f2;
+    letter-spacing: -1px;
+    background:#4c4c4c url('../img/btn-file-down.png') no-repeat 107px center;
+    padding-left:38px;
+}
+
+/* 미놀 외 제품 소개 */
+.popup-products .popup-product2-wrap {
+    position:relative;
+    padding:50px 60px 0 60px;
+}
+.popup-products .popup-product2-wrap h2 {
+    width:100%;
+    text-align: center;
+    color:#4c4c4c;
+    font-size:16px;
+    font-weight: 400;
+    padding:0 0 23px 0;
+}
+.popup-products .popup-product2-wrap table {
+    width:100%;
+    height:500px;
+    margin-bottom:23px;
+}
+.popup-products .popup-product2-wrap table th {
+    font-size:14px;
+    font-weight: 300;
+    color:#333;
+    vertical-align: middle;
+    border:1px #ccc solid;
+    border-right:none;
+}
+.popup-products .popup-product2-wrap table td {
+    text-align: left;
+    font-size:14px;
+    font-weight: 300;
+    line-height: 150%;
+    height:125px;
+    vertical-align: middle;
+    border:1px #ccc solid;
+    color:#333;
+    padding-left:18px;
+}
+.popup-products .popup-product2-wrap a.btn-file-down {
+    position: fixed;
+    bottom:-60px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    width:160px;
+    height:40px;
+    border-radius: 50px;
+    color:#f2f2f2;
+    letter-spacing: -1px;
+    background:#4c4c4c url('../img/btn-file-down.png') no-repeat 107px center;
+    padding-left:38px;
+}
+
+
+/* 미놀 제품 Q&A */
+
+.popup-product-qna-wrap {
+    padding:60px 100px 0 100px;
+}
+.popup-products .popup-product-qna-wrap h2 {
+    font-size:28px;
+    font-weight: 500;
+    margin:10px 0 50px 0;
+    color:#262626;
+    text-align:center;
+
+}
+.popup-products .popup-product-qna-wrap p {
+    font-size:16px;
+    color:#4c4c4c;
+    text-align:center;
+}
+.popup-products .popup-product-qna-wrap dl {
+    width:100%;
+    margin:0 auto 5px;
+}
+.popup-products .popup-product-qna-wrap dl>dt {
+    color:#4c4c4c;
+    font-size:14px;
+    border-bottom:1px #949494 solid;
+    text-indent: -22px;
+    padding:13px 0 13px 20px;
+}
+.popup-products .popup-product-qna-wrap dl>dd {
+    color:#4c4c4c;
+    font-size:14px;
+    text-indent: -20px;
+    padding:13px 0 13px 20px;
+    line-height: 150%;
+}
+.popup-products .popup-product-qna-wrap span {
+    color:#262626;
+}
+
+.popup-products .popup-product-qna-wrap .minol-table {
+    width:100%;
+    margin-top:20px;
+}
+.popup-products .popup-product-qna-wrap .minol-table th {
+    background:#4c4c4c;
+    height:70px;
+    color:#fff;
+    font-weight:400;
+    font-size:14px;
+    letter-spacing:-1px;
+    border:1px #ccc solid;
+    border-right:none;
+    vertical-align: middle;
+    line-height: 150%;
+    text-align:center;
+}
+.popup-products .popup-product-qna-wrap .minol-table td {
+    height:70px;
+    letter-spacing: -1px;
+    color:#4c4c4c;
+    font-size:14px;
+    font-weight: 400;
+    border:1px #ccc solid;
+    vertical-align: middle;
+    line-height: 150%;
+    text-align:center;
+}
+
+
+/* 미놀 이외 제품 Q&A */
+.popup-products .popup-product2-qna-wrap {
+    padding:60px 100px 0 100px;
+}
+.popup-products .popup-product2-qna-wrap h2 {
+    font-size:28px;
+    font-weight: 500;
+    margin:10px 0 50px 0;
+    color:#262626;
+    text-align:center;
+}
+.popup-products .popup-product2-qna-wrap p {
+    font-size:16px;
+    color:#4c4c4c;
+    text-align:center;
+}
+.popup-products .popup-product2-qna-wrap dl {
+    width:100%;
+    margin:0 auto 5px;
+}
+.popup-products .popup-product2-qna-wrap dl>dt {
+    color:#4c4c4c;
+    font-size:14px;
+    border-bottom:1px #949494 solid;
+    text-indent: -22px;
+    padding:13px 0 13px 20px;
+}
+.popup-products .popup-product2-qna-wrap dl>dd {
+    color:#4c4c4c;
+    font-size:14px;
+    text-indent: -20px;
+    padding:13px 0 13px 20px;
+    line-height: 150%;
+}
+.popup-products .popup-product2-qna-wrap span {
+    color:#262626;
+}
+
+/* 팝업 */
+.popup {
+    display:none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:1820px;
+    height:880px;
+    background:#fff;
+    border-radius:0 0 0 20px;
+    z-index: 1000;
+    font-size:16px;
+    pointer-events: auto;
+}
+.popup a.btn-close {
+    position: absolute;
+    top:40px;
+    right:40px;
+    display: block;
+    width:28px;
+    height:28px;
+    background:url('../img/btn-popup-close.png') no-repeat 0 0;
+    z-index: 1000;
+}
+.popup-products {
+    display:none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:1200px;
+    height:680px;
+    background:#fff;
+    border-radius:20px;
+    z-index: 1000;
+    font-size:16px;
+    pointer-events: auto;
+}
+.popup-products a.btn-close {
+    position: absolute;
+    top:20px;
+    right:20px;
+    display: block;
+    width:22px;
+    height:22px;
+    background:url('../img/btn-popup-products-close.png') no-repeat 0 0;
+    z-index: 1000;
+}
+a.btn-file-down {
+    position: fixed;
+    bottom:30px;
+    left:50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    width:160px;
+    height:40px;
+    border-radius: 50px;
+    color:#f2f2f2;
+    letter-spacing: -1px;
+    background:#4c4c4c url('../img/btn-file-down.png') no-repeat 107px center;
+    padding-left:38px;
+}
+
+.popup h2 {margin:110px 0 70px 0; font-size:40px;}
+.popup table {width:100%; text-align: center;margin:0 auto;}
+.popup table th, .popup table td {border:1px #949494 solid;font-size:20px;padding:18px;vertical-align: middle;line-height: 150%;}
+.popup table th {color:#262626;}
+.popup table td {color:#878787;}
+.popup table td>strong {color:#4c4c4c;font-weight: normal;}
+
+
+
+/* 제품 편의성 강조페이지 */
+.convenience-wrap {
+    position: relative;
+    width:100%;
+    margin:0 auto;
+    background:#00a9ff;
+    color:#fff;
+}
+.convenience-wrap h2 {
+    position:absolute;
+    width:100%;
+    top:calc(50% - 280px);
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 150%;
+    letter-spacing: -2px;
+    font-size:40px;
+    font-weight: 400;
+    z-index: 90;
+}
+.convenience {
+    position: relative;
+    width:1200px;
+    margin:0 auto;
+}
+.convenience>div {
+    position: relative;
+    font-size:20px;
+    color:#fff;
+    z-index: 90;
+}
+
+.convenience dl{display: none;text-indent: -8px;padding:0 0 0 10px;}
+.convenience dl>dt {color:#262626;font-size:20px;margin-bottom:17px;}
+.convenience dl>dd {color:#4c4c4c;font-size:16px;line-height: 120%;}
+
+.convenience p {font-size:20px;}
+.convenience p.point1{position: absolute; top:45px;left:183px;}
+.convenience p.point2{position: absolute; top:7px;left:810px;}
+.convenience p.point3{position: absolute; top:148px;left:704px;}
+
+.convenience .point1_inner {
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:30px;
+    left:390px;
+    overflow: hidden;
+    background:#fff url('../img/btn-tooltip-plus.png') no-repeat 3px 6px;
+    border-radius: 30px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+.convenience .point1_inner.on {
+    position:absolute;
+    top:30px;
+    left:-10px;
+    width:450px;
+    height:180px;
+    color:#000;
+    background:#fff url('../img/btn-tooltip-close.png') no-repeat 412px 20px;
+    padding:40px 0 0 40px;
+    letter-spacing: -1px;
+    opacity: 0.8;
+}
+
+.convenience .point2_inner {
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:-10px;
+    left:750px;
+    overflow: hidden;
+    background:#fff url('../img/btn-tooltip-plus.png') no-repeat 3px 6px;
+    border-radius: 30px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+.convenience .point2_inner.on {
+    position:absolute;
+    top:-10px;
+    left:750px;
+    width:330px;
+    height:166px;
+    color:#000;
+    background:#fff url('../img/btn-tooltip-close.png') no-repeat 17px 18px;
+    padding:40px 0 0 40px;
+    letter-spacing: -1px;
+    opacity: 0.8;
+}
+.convenience .point3_inner {
+    position:absolute;
+    width:50px;
+    height:50px;
+    top:130px;
+    left:640px;
+    overflow: hidden;
+    background:#fff url('../img/btn-tooltip-plus.png') no-repeat 3px 6px;
+    border-radius: 30px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+.convenience .point3_inner.on {
+    position:absolute;
+    top:130px;
+    left:640px;
+    width:360px;
+    height:170px;
+    color:#000;
+    background:#fff url('../img/btn-tooltip-close.png') no-repeat 15px 21px;
+    padding:40px 0 0 40px;
+    letter-spacing: -1px;
+    opacity: 0.8;
+}    
+.bg-minol {
+    position: absolute;
+    top:52%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:389px;
+    height:351px;
+    background: url('../img/bg-minol.png') no-repeat 0 0;
+}
+
+영상
+.video-wrap {
+    position:relative;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.video-wrap h2 {
+    position:absolute;
+    width:100%;
+    line-height:130%;
+    top:195px;
+    text-align:center;
+    z-index:90;
+    font-size:2.5rem;
+    font-weight: 400;
+    letter-spacing: -1px;
+    color:#fff;
+}
+.video-wrap>div {
+    position: relative;
+    height:100vh;
+    transform: skewX(-5deg);
+    overflow: hidden;
+}
+.video-wrap>div:nth-of-type(1) {
+    position: absolute;
+    width:30%;
+    top:0;
+    left:-3%;
+    height:100vh;
+}
+.video-wrap>div:nth-of-type(2) {
+    position: absolute;
+    width:25%;
+    top:0;
+    left:23%;
+    height:100vh;
+} 
+.video-wrap>div:nth-of-type(3) {
+    position: absolute;
+    width:25%;
+    top:0;
+    left:48%;
+    height:100vh;
+}
+.video-wrap>div:nth-of-type(4) {
+    position: absolute;
+    width:30%;
+    top:0;
+    left:73%;
+    height:100vh;
+}
+
+.video-wrap>div{transition: all 1s;}
+.video-wrap>div>div .video-dim {position:absolute; width:100%;height:100%; background:linear-gradient(to bottom, black, rgb(48, 48, 48)); z-index:70;transition: all 1s;opacity: 0.7;}
+.video-wrap>div:nth-of-type(1) video {height:100vh; transform:skewX(5deg) scale(1.2) translateX(-5%)}
+.video-wrap>div:nth-of-type(2) video {height:100vh; transform:skewX(5deg) scale(1.2) translateX(-13%)}
+.video-wrap>div:nth-of-type(3) video {height:100vh; transform:skewX(5deg) scale(1.2) translateX(-15%)}
+.video-wrap>div:nth-of-type(4) video {height:100vh; transform:skewX(5deg) scale(1.2) translateX(-5%)}
+.video-wrap>div.on {transform:skewX(-5deg) scale(1.2) translateX(1%)}
+.video-wrap>div>div.on .video-dim {opacity:0;z-index:70;}
+.text {position:absolute;top:50%;left:50%;z-index:75;color:#fff;text-align:center;transform:skewX(5deg);font-size:28px;line-height: 140%;letter-spacing:-1px;}
+.video1 .text {transform:skewX(5deg) translate(-50%)}
+.video2 .text {transform:skewX(5deg) translate(-50%)}
+.video3 .text {transform:skewX(5deg) translate(-50%)}
+.video4 .text {transform:skewX(5deg) translate(-50%)} 
+
+/* 약국찾기 */
+.pharmacy-wrap {
+    width:100%;
+    padding-top: 200px;
+    min-height: calc(100% - 312px);
+}
+.pharmacy {
+    width:1200px;
+    margin:0 auto;
+}
+.pharmacy-wrap h2 {
+    width:100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size:40px;
+    letter-spacing: -1px;
+}
+.pharmacy-wrap button {
+    width:200px;
+    border-radius:500px;
+    padding:10px;
+    background:#fff;
+    font-size:16px;
+    border:1px #4c4c4c solid;
+}
+.pharmacy-wrap button:hover,
+.pharmacy-wrap button.on {
+    background:#0089cf;
+    border:1px transparent;
+    color:#fff;
+    cursor: pointer;
+}
+.button-wrap {
+    width:425px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-wrap:nth-of-type(1) {
+    margin-bottom:12px;
+}
+.button-wrap:nth-of-type(2) {
+    margin-bottom:75px;
+}
+
+.pharmacy-wrap select {
+    width:200px;
+    padding:12px 10px;
+    border:1px #4c4c4c solid;
+    border-radius: 50px;
+    font-size:16px;
+    color:#4c4c4c;
+    background: url('../img/bg-selectbox-arrow.png') no-repeat 165px 18px;
+}
+
+/* 셀렉트 박스 가운데 정렬 */
+select {
+    text-align: center;
+    text-align-last: center;
+    -ms-text-align-last: center;
+    -moz-text-align-last: center;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none;
+}
+.select-wrap {
+    width:425px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto 12px;
+}
+.location {
+    width:425px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto 12px;
+}
+.distance.on {
+    width:425px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto 12px;
+}
+.juso.on {
+    width:425px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto 12px;
+}
+.juso.on input {
+    width:100%;
+    padding:12px 20px;
+    border:1px #4c4c4c solid;
+    border-radius: 50px;
+    font-size:16px;
+    color:#4c4c4c;
+    box-sizing: border-box;
+    margin-bottom:12px;
+}
+.pharmacy-wrap .location button {
+    width:200px;
+    color:#4c4c4c;
+}
+.pharmacy-wrap .location button:hover, .pharmacy-wrap .location button.on {
+    color:#fff;
+}
+.pharmacy-wrap .distance button,
+.pharmacy-wrap .juso button {
+    width:120px;
+    color:#4c4c4c;
+}
+.pharmacy-wrap .distance button:hover, .pharmacy-wrap .distance button.on,
+.pharmacy-wrap .juso button:hover, .pharmacy-wrap .juso button.on {
+    color:#fff;
+}
+
+.distance-wrap {
+    display: none;
+}
+.distance, .juso {
+    display: none;
+}
+
+#map {
+    width:1200px;
+    height:485px;
+    border-radius:10px;
+    border:1px #dedede solid;
+    margin:70px 0;
+}
+
+
+
+/* 미놀 이외 제품 */
+.product2-wrap {
+    width:100%;
+    background:#f2f9fd;
+}
+.product2-wrap .product2 {
+    position: relative;
+    width:1200px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+.product2 .photo {
+    position: relative;
+    width:600px;
+    height:600px;
+}
+
+
+/* 미놀노즈 점비액 툴팁 */
+.tooltip-area1  {
+    position: relative;
+}
+
+/* part1 */
+.tooltip-area1 div dl {display:none;color:#fff;padding:40px 20px 30px 30px;box-sizing: border-box;}
+.tooltip-area1 div dt {font-size:20px;margin-bottom:8px;}
+.tooltip-area1 div dd {line-height:130%;font-size:16px;letter-spacing: -1px;}
+.tooltip-area1 div {background:rgba(48,159,216, 0.7) url('../img/btn-product2-plus.png') 0 0 ; border-radius:50px;}
+.tooltip-area1 p {font-size:16px; color:#4c4c4c;}
+
+.tooltip-area1 p.title1 {position:absolute; top:71px; left:80px; z-index:20;}
+.tooltip-area1 p.title2 {position:absolute; top:311px; left:438px; z-index:20;}
+.tooltip-area1 p.title3 {position:absolute; top:395px; left:46px; z-index:20;}
+
+.tooltip-area1 div.desc1 {position:absolute; overflow: hidden; top:94px; left:165px; width:40px; height:40px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') no-repeat 0 0; border-radius:40px; z-index: 20; transition: all 0.3s;}
+.tooltip-area1 div.desc2 {position:absolute; overflow: hidden; top:300px; left:386px; width:40px; height:40px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') no-repeat 0 0; border-radius:40px; z-index: 20; transition: all 0.3s;}
+.tooltip-area1 div.desc3 {position:absolute; overflow: hidden; top:383px; left:155px; width:40px; height:40px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') no-repeat 0 0; border-radius:40px; z-index: 20; transition: all 0.3s;}
+
+.tooltip-area1 div.on {background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') 0 0 ; border-radius:10px;}
+.tooltip-area1 div.desc1.on {position:absolute; top:94px; left:165px; width:382px; height:139px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+.tooltip-area1 div.desc2.on {position:absolute; top:300px; left:384px; width:352px; height:182px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+.tooltip-area1 div.desc3.on {position:absolute; top:383px; left:155px; width:355px; height:183px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-close.png') no-repeat  14px 15px; border-radius:10px; z-index: 20;}
+
+/* part 2 */
+.tooltip-area2 div dl {display:none;color:#fff;padding:40px 20px 30px 30px;box-sizing: border-box;}
+.tooltip-area2 div dt {font-size:20px;margin-bottom:8px;}
+.tooltip-area2 div dd {line-height:130%;font-size:16px;letter-spacing: -1px;}
+.tooltip-area2 div {background:rgba(48,159,216, 0.7) url('../img/btn-product2-plus.png') 0 0 ; border-radius:50px;}
+.tooltip-area2 p {font-size:16px; color:#4c4c4c;}
+
+.tooltip-area2 p.title1 {position:absolute; top:131px; left:60px; z-index:20;}
+.tooltip-area2 p.title2 {position:absolute; top:311px; left:438px; z-index:20;}
+.tooltip-area2 p.title3 {position:absolute; top:395px; left:46px; z-index:20;}
+
+.tooltip-area2 div.desc1 {position:absolute; overflow: hidden; top:94px; left:175px; width:40px; height:40px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') no-repeat 0 0; border-radius:40px; z-index: 20; transition: all 0.3s;}
+.tooltip-area2 div.desc2 {position:absolute; overflow: hidden; top:300px; left:386px; width:40px; height:40px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') no-repeat 0 0; border-radius:40px; z-index: 20; transition: all 0.3s;}
+.tooltip-area2 div.desc3 {position:absolute; overflow: hidden; top:383px; left:155px; width:40px; height:40px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') no-repeat 0 0; border-radius:40px; z-index: 20; transition: all 0.3s;}
+
+.tooltip-area2 div.on {background:rgba(48,159,216, 0.8) url('../img/btn-product2-plus.png') 0 0 ; border-radius:10px;}
+.tooltip-area2 div.desc1.on {position:absolute; top:94px; left:175px; width:315px; height:163px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+.tooltip-area2 div.desc2.on {position:absolute; top:300px; left:384px; width:312px; height:160px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+.tooltip-area2 div.desc3.on {position:absolute; top:383px; left:155px; width:318px; height:183px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-close.png') no-repeat  14px 15px; border-radius:10px; z-index: 20;}
+
+
+/* 이비나액 */
+.tooltip-area.port2  {
+    position: relative;
+}
+
+.product2 .photo img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.product2 .photo span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:480px;
+    height:480px;
+    background:#fff;
+    border-radius: 50%;
+    z-index:1;
+}
+
+.product2.renol .photo span {
+    position: absolute;
+    top: 46%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 480px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.product2 .descriptionription {
+    width:600px;
+    padding-left:30px;
+}
+.product2 .description>span {
+    display: inline-block;
+    background:#79c1e6;
+    color:#fff;
+    font-size:16px;
+    border-radius: 5px 0 0 0;
+    padding:7px 10px;
+    margin-top:10px;
+}
+.product2 .description strong {
+    display: block;
+    font-size:24px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    color:#0089cf;
+    margin-bottom:5px;
+}
+.product2 .description h2 {
+    font-size:40px;
+    font-weight: 400;
+    margin-bottom:38px;
+}
+.product2 .txt {
+    line-height:150%;
+    color:#4c4c4c;
+}
+.product2 .button-area {
+    margin-top:45px;
+}
+.product2 .button-area>ul {
+    display:flex;
+    flex-direction: row;
+    justify-self: center;
+    align-content: center;
+}
+.product2 .button-area>ul>li {
+    margin:0 10px;
+}
+.product2 .button-area>ul>li:nth-of-type(1) {
+    margin-left:0;
+}
+.product2 .button-area>ul>li>a {
+    display: block;
+    width:160px;
+    height:40px;
+    border-radius:50px;
+    background: #fff;
+    border:1px #4c4c4c solid;
+    color:#4c4c4c;
+    text-align: center;
+    padding:10px 11px;
+}
+.product2 .button-area>ul>li>a:hover, .product2 .button-area>ul>li>a.on {
+    border:1px transparent solid;
+    background:#0089cf;
+    color:#fff;
+}
+
+/* footer */
+footer {
+    width:100%;
+    background:#2f2f2f;
+    color:#ffffff;
+    line-height: 160%;
+    letter-spacing: -1px;
+    font-size: 16px;
+    height:428px;
+}
+footer.fix {
+    position: fixed;
+    bottom:0;
+    z-index: 1000;
+}
+.footer-wrap {
+    width: 1200px;
+    margin:0 auto;
+    padding-top:85px;
+}
+.footer-wrap .util {
+    position: relative;
+    height:40px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom:50px;
+    vertical-align: middle;
+    background: url('../img/bg-util.png') no-repeat center 12px;
+}
+.footer-wrap .util .terms {
+    margin-top:-1px;
+}
+.footer-wrap .util .terms a {
+    font-size:14px;
+    color:#949494;
+}
+.footer-wrap .util .company-logo a{
+    display: block;
+    width:139px;
+    height:24px;
+    margin-right:25px;
+    background: url('../img/company-logo.png') no-repeat 0 0;
+}
+.footer-wrap .util ul.sns {
+    position: absolute;
+    top:-5px;
+    right:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer-wrap .util ul.sns li a {
+    display: block;
+    width:34px;
+    height:34px;
+    margin:0 3px;
+    background: url('../img/bg-sns.png') no-repeat;
+}
+.footer-wrap .util ul.sns li:nth-of-type(1) a {margin-right:10px; background-position: 0 0;}
+.footer-wrap .util ul.sns li:nth-of-type(2) a {background-position: -34px 0;}
+.footer-wrap .util ul.sns li:nth-of-type(3) a {background-position: -68px 0;}
+
+.footer-wrap .info {
+    position: relative;
+    font-weight: 300;
+}
+.footer-wrap .info select {text-align:left !important;}
+.footer-wrap .info a {color:#fff;}
+.footer-wrap .info .family-site {
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:200px;
+    height:44px;
+    border-radius: 50px;
+    border: none;
+    color:#fff;
+    text-align-last: left;
+    padding-left:30px;
+    background: #0089cf url('../img/bg-selectbox-arrow-up.png') no-repeat 160px center;
+}
+.footer-wrap .info .customer-center {
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:20px;
+    line-height: 150%;
+    letter-spacing: -1px;
+}
+.footer-wrap .info .customer-center span {
+    font-size:32px;
+}
+.footer-wrap .info address {
+    font-style: normal;
+}
+.footer-wrap .info .copyright {
+    margin-top:75px;
+    color:#949494;
+}
+
+/* ========= 모바일 css =========== */
+
+/* 타블렛 */
+/* @media screen and (max-width:1024px) {
+    
+    
+} */
+
+@media screen and (max-height:600px) {
+    .popup-product2-wrap .mo {
+        overflow-y: auto;
+        height:400px;
+    }
+    .product-find h2 {
+        padding-top: 8.5rem !important;
+    }
+    .neck-mo-wrap .neck h2 {
+        padding-top: 5rem !important;
+    }
+    .mouse-mo-wrap .mouse-care h2 {
+        padding-top: 4.5rem !important;
+    }
+    .popup .title-btn {
+        margin:50px auto 0px !important;
+    }
+    .popup-product1-wrap {
+        overflow-y: auto;
+        height:450px;
+    }
+}
+
+/* 스마트폰 세로 */
+@media screen and (max-width:576px) {
+	.pc {display:none !important;}  /* 모바일에서 pc 클래스는 보이지 않게 함 */
+    .mo {display:block !important;} /* 모바일에서 mo 클래스 보이게 함 */
+    
+    body{
+		position: relative;
+	}
+	.dim {
+        display: none;
+    }
+    .dim.on {
+        position: fixed;
+        display: block;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+        background: rgba(0,0,0,0.7);
+        z-index: 1000;
+    }
+
+    .header-wrap {
+        position: relative;
+        width:100%;         
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 1.25rem;
+    }
+
+    .header-wrap h1 a {
+        display: block;
+    }
+    .header-wrap h1 a img {
+        display: block;
+        width:2.188rem;
+    }
+
+	#headerMenu {
+        position: fixed;
+		background:rgba(0,0,0, 0.3);
+        height:3.125rem;
+        z-index: 1500;
+	}
+    .btn-menu-open {
+        position: fixed;
+        top:1rem;
+        right:1.875rem;
+        display: block;
+        width:1.250rem;
+        z-index: 1500;
+        cursor: pointer;
+    }
+	#headerMenu nav {
+		position: fixed;
+		display: flex;
+        flex-direction: column;
+		width:100%;
+		height:100%;
+        top:0;
+		left:100%;
+		background: #fff;
+		z-index:100;
+		transition: all 0.5s;
+	}
+	#headerMenu nav.on {
+		left:37%;
+	}
+    #headerMenu nav .mo-menu-head {
+        position: absolute;
+        top:1rem;
+        left:2.5rem;
+        display: flex;
+        width:46.6%;
+        padding-bottom:14px;
+        border-bottom:2px #0089cf solid;
+    }
+    #headerMenu nav.on .btn-menu-close {
+        position: absolute;
+        top:1rem;
+        left:-7.7%;
+        display: block;
+        width:5.5%;
+        z-index: 100;
+        cursor: pointer;
+    }
+    #headerMenu nav>ul {
+        position: absolute;
+        width:52.2%;
+        bottom:100px;
+        left:11.11%;
+        display: flex;
+        flex-direction: column;
+        margin:0;
+        padding:0;
+    }
+    #headerMenu nav>ul>li, #headerMenu nav>p {
+        margin:0;
+        padding-bottom:4px;
+        border-bottom:none;
+        margin-bottom: 35px;
+    }
+    #headerMenu nav>ul>li>a,
+    #headerMenu li.active a    
+    {
+        margin:0;
+        padding:0;
+        font-size:1.125rem;
+        color:#0089cf;
+    }
+    #headerMenu nav>p {
+        position:absolute;
+        width:52.2%;
+        bottom:45px;
+        left:11.11%;
+    }
+    #headerMenu nav>p>a {
+        color:#0089cf;
+        font-size:1.125rem;
+        padding:0;
+    }
+
+    /* 메인배너 */
+    .main-banner-wrap {
+        position: relative;
+        width:100vw;
+        height:100vh;
+    }
+    .main-banner-mo {
+        position: relative;
+    }
+    .main-banner-mo .swiper-slide img {
+        display: block;
+        width:100vw;
+        height:100vh;
+        object-fit: fill;
+    }
+    .btn-playpause-wrap {
+        position:absolute;
+        width:24px;
+        bottom:106px;
+        left:47%;
+        z-index:99;
+        transform: translate(0);
+    }
+    
+    /* 배너 재생, 멈춤 버튼 */
+    .btn-playpause-mo {
+        position: relative;
+        height:24px;
+    }
+    .btn-playpause-mo button {
+        position: absolute;
+        top:75px;
+        left:65px;
+        display: block;
+        width:24px;
+        height:24px;
+        border:none;
+        background: url('../img/btn-playpause.png') no-repeat center 0;
+    }
+    .btn-playpause-mo button.on {
+        background: url('../img/btn-playpause.png') no-repeat center -24px;
+    }
+    
+    .main-banner-mo .swiper-pagination {
+        position: absolute;
+        left:-5px !important;
+        bottom:40px !important;
+    }
+    .main-banner-mo .swiper-pagination span {
+        display: inline-block;
+        margin:0 4px !important;
+    }
+    .main-banner-mo .swiper-pagination-bullet {
+        width: 18px;
+        height: 4px;
+        border-radius: 5px;
+        background: #fff ;
+        opacity: 0.5;
+    }
+    .main-banner-mo .swiper-pagination-bullet-active {
+        width: 50px;
+        background: #ccc;
+        opacity: 0.8;
+    }
+    
+    .main-banner-mo .swiper-pagination-bullet-active {
+        position: relative;
+    }
+    
+    .main-banner-mo .swiper-pagination-bullet {font-size:0;}
+    .main-banner-mo .swiper-pagination-bullet-active span.progress {
+        width:0;
+        height:4px;
+        position: absolute;
+        background: #fff;
+        top:0;
+        left:0;
+        border-radius: 4px;
+        animation: mainBanner-pager 4s;
+        opacity: 1;
+        margin:0 !important;
+    }
+    
+    @keyframes mainBanner-pager {
+        from {width: 0;}
+        to {width: 100%;}
+    }
+   
+    .main-banner-mo .swiper-button-next,
+    .main-banner-mo .swiper-button-prev {
+        display: none;
+    }
+
+    /* 미놀의 역사 */
+    .history-wrap {
+        position: relative;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+    }
+    .history-wrap h2 {
+        font-size:1.750rem;
+        color:#0089cf;
+        letter-spacing:-3px;
+        line-height: 90%;
+        text-align: center;
+    }
+    .history-wrap h2 span {
+        font-size:1.125rem;
+        color:#4c4c4c;
+        letter-spacing:-1px;
+    }
+    .history-wrap .history-mo {
+        text-align: center;
+    }
+    .history-mo .swiper-slide {
+        position: relative;
+        padding-bottom: 80px;
+    }
+    .history-mo .swiper-slide .img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:230px;
+    }
+    .history-mo .swiper-slide .img img {
+        object-fit: none;
+    }
+    .history-mo .swiper-slide .date {
+        font-size:1.375rem;
+        color:#0089cf;
+    }
+    .history-mo .swiper-slide .title {
+        margin-top:0.5rem;
+        font-size:0.8rem;
+        color:#0089cf;
+    }
+    .history-mo .swiper-pagination-bullet {
+        width:30px;
+        height:30px;
+        transform: scale(0.4);
+        transition: transform 0.2s ease-in-out;
+    }
+    .history-mo .swiper-pagination-bullet-active {
+        width:30px;
+        height:30px;
+        background:url('../img/bg-active-minol.png') no-repeat 0 0;
+        transform: scale(1);
+    }
+    
+    /* 모든 미놀 제품 알아보기 */
+    .product-banner-wrap {
+        position: relative;
+        width:100%;
+        margin:0 auto;
+        background:#f2f9fd;
+        overflow: hidden;
+        transition: all 1s;
+    }
+    .product-banner-wrap h2 {
+        position:relative;
+        font-size:1.5rem;
+        text-align:center;
+        letter-spacing: -1px;
+        margin:25px 0;
+        z-index: 2;
+    }
+    .product-banner-wrap .circle1 {
+        position: absolute;
+        bottom:-210px;
+        left:-180px;
+        width:620px;
+        height:620px;
+        background: #e6f5fb;
+        -webkit-mask-image: url('../img/circle1.png');
+        mask-image: url('../img/circle1.png');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        z-index: 1;
+        transition: all 1s;
+        animation: topdown 8s infinite ease-in-out;
+    }
+    @keyframes topdown {
+        0% {transform: translate(0, 0%);}
+        50% {transform: translate(-20%, 20%);}
+        100% {transform: translate(0, 0%);}
+    }
+    .product-banner-wrap .circle2 {
+        position: absolute;
+        top:100px;
+        right:-20px;
+        width:274px;
+        height:274px;
+        background: #e6f5fb;
+        -webkit-mask-image: url('../img/circle2.png');
+        mask-image: url('../img/circle2.png');
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        z-index: 1;
+        transition: all 1s;
+        animation: leftRight 8s infinite ease-in-out;
+    }
+    @keyframes leftRight {
+        0% {transform: translate(0, 0);}
+        50% {transform: translate(50%, -50%);}
+        100% {transform: translate(0, 0);}
+    }
+    .product-banner2 {
+        position: relative;
+        width:280px !important;
+        margin:0 auto;
+        padding:30px 0 100px 0;
+        z-index: 10;
+    }
+    .product-banner2 .swiper-slide {
+        width:280px !important;
+        height:280px;
+        background:transparent;
+    }
+    .product-banner2 .swiper-slide .text-circle {
+        width:280px !important;
+        height:280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background:transparent;
+        border-radius: 50%;
+        transition: all 1s;
+    }
+
+    .product-banner2 .swiper-slide-active p.title, .product-banner2 .swiper-slide-active p.desc {
+        display: block;
+        color:#fff;
+    }
+
+    .product-banner2 .swiper-slide p.taste {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:108px;
+        height:30px;
+        margin-bottom:10px;
+        background: #fff;
+        border-radius: 50px;
+    }
+
+    /* 활성화 된 미놀맛별 텍스트 색상 */
+    .product-banner2 .swiper-slide-active p.taste {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:108px;
+        height:30px;
+        margin-bottom:10px;
+        background: #fff;
+        border-radius: 50px;
+    }
+    .product-banner2 .product1.swiper-slide p.taste {display:flex; color:#00a1dd;}
+    .product-banner2 .product2.swiper-slide p.taste {display:flex; color:#ffa417;}
+    .product-banner2 .product3.swiper-slide p.taste {display:flex; color:#ef889f;}
+    
+    .product-banner2 .product1.swiper-slide p.desc {color:#00a1dd;}
+    .product-banner2 .product2.swiper-slide p.desc {color:#ffa417;}
+    .product-banner2 .product3.swiper-slide p.desc {color:#ef889f;}
+    .product-banner2 .product4.swiper-slide p.desc {color:#e4443b;}
+    .product-banner2 .product5.swiper-slide p.desc {color:#0072e3;}
+    .product-banner2 .product6.swiper-slide p.desc {color:#57c4df;}
+
+    .product-banner2 .swiper-slide p.desc {
+        width:200px;
+        font-size:0.875rem;
+        line-height: 140%;
+        letter-spacing: -1px;
+        text-align: center;
+        color:#fff;
+    }
+    .product-banner2 .swiper-slide-active p.desc {
+        font-size:0.875rem;
+    }
+    .product-banner2 .swiper-slide p.title {
+        font-size:1.125rem;
+        margin-bottom:10px;
+        color:#fff;
+    }
+    .product-banner2 .swiper-slide p.product {
+        margin-top:10px;
+    }
+    .product-banner2 .product1.swiper-slide-active .text-circle {background:#00a1dd;}
+    .product-banner2 .product2.swiper-slide-active .text-circle {background:#ffa417;}
+    .product-banner2 .product3.swiper-slide-active .text-circle {background:#ef889f;}
+    .product-banner2 .product4.swiper-slide-active .text-circle {background:#e4443b;}
+    .product-banner2 .product5.swiper-slide-active .text-circle {background:#0072e3;}
+    .product-banner2 .product6.swiper-slide-active .text-circle {background:#57c4df;}
+
+    .product-banner2 .product-button-prev {
+        position:absolute;
+        top:42%;
+        left:13%;
+        transform: translate(-50%, -50%);
+        width:13px;
+        height:23px;
+        background: url('../img/bg-circle-arrow.png') no-repeat 0 0;
+        z-index: 90;
+        cursor: pointer;
+    }
+    .product-banner2 .product-button-next {
+        position:absolute;
+        top:42%;
+        left:87%;
+        transform: translate(-50%, -50%);
+        width:13px;
+        height:23px;
+        background: url('../img/bg-circle-arrow.png') no-repeat -13px 0;
+        z-index: 90;
+        cursor: pointer;
+    }
+    .product-banner2 .swiper-slide p.desc {
+        width:100%;
+        margin-top:25px;
+    }
+
+    /* product1 - 목 아플 때 효과 빠른 미놀 에프트로키 */
+    .product1-wrap {
+        position: relative;
+        width:100vw;
+        height:100%;
+        overflow: hidden;
+    }
+    .product1-wrap .title {
+        position: absolute;
+        width:100%;
+        top:190px;
+        left:50%;
+        z-index: 95;
+        transform: translate(-50%);
+        color:#fff;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+    .product1-wrap .title p {
+        font-size:1rem;
+        margin-bottom:0.625rem;
+    }
+    .product1-wrap .title h2 {
+        font-size:1.5rem;
+        margin-bottom:0.625rem;
+    }
+    .product1-wrap .title h2 span {
+        font-size:24px;
+        display: block;
+        margin-bottom:10px;
+    }
+    .product1-wrap .title h3 {
+        width:100%;
+        line-height: 160%;
+        font-size:0.875rem;
+        margin-bottom:1.875rem;
+    }
+    .product1-wrap>ul {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .product1-wrap>ul>li {
+        width:33.3%;
+        height:100vh;
+        overflow: hidden;
+    }
+    .minol-wrap>ul {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin:15px 0;
+    }
+    .minol-wrap>ul>li {margin:0 5px;}
+    .minol-wrap>ul>li>a {
+        display: block;
+        width:113px;
+        height:37px;
+        font-size:0.875rem;
+        background: #fff;
+        color: #0089cf;
+        border-radius: 50px;
+        border: 1px transparent;
+        padding: 10px 20px;
+    }
+    .minol-wrap>ul>li>a.on, .minol-wrap>ul>li>a:hover {
+        background:#0089cf;
+        border:1px #fff solid;
+        color:#fff;
+    }
+
+    /* 미놀 애니메이션 */
+    .product1-wrap>ul>li:nth-of-type(1) {
+        position:relative;
+        background:#ffa417;
+    }
+    .product1-wrap>ul>li:nth-of-type(2) {
+        position:relative;
+        background:#00a1dd;
+    }
+    .product1-wrap>ul>li:nth-of-type(3) {
+        position:relative;
+        background:#ef889f;
+    }
+    .minol-wrap {
+        position: relative;
+        width:100%;
+    }
+    .ani-part {
+        position: relative;
+    }
+    .ani-part>div {
+        position:absolute;
+        top:0;
+        left:0;
+    }
+
+    .minol-orange {position: absolute;top:110%;left:150%; opacity:0; z-index: 90;transform: translate(-50%) scale(1); transition: 0.5s all ease-out;}
+    .minol-mint {position: absolute;top:110%;left:50%; opacity:0; z-index: 90;transform: translate(-50%) scale(1); transition: 0.7s all ease-out;}
+    .minol-peach {position: absolute;top:110%;left:-50%; opacity:0; z-index: 90;transform: translate(-50%) scale(1); transition: 0.9s all ease-out;}
+
+    .minol-orange.on {position: absolute;top:60%;left:150%; opacity:1; z-index: 90;transform: translate(-50%) scale(1);}
+    .minol-mint.on {position: absolute;top:60%;left:50%; opacity:1; z-index: 90;transform: translate(-50%) scale(1);}
+    .minol-peach.on {position: absolute;top:60%;left:-50%; opacity:1; z-index: 90;transform: translate(-50%) scale(1);}
+
+
+    .orange1 {
+        position: absolute;
+        top: 60px;
+        left: -0;
+        transform: rotate(355deg);
+        animation: orange-ani1 15s infinite ease-in-out;
+    }
+    .orange2 {
+        position: absolute;
+        top: 360px;
+        left: -10%;
+        transform: rotate(246deg);
+        animation: orange-ani2 15s infinite ease-in-out;
+    }
+    .orange3 {
+        position: absolute;
+        top: 740px;
+        left: 270px;
+        transform: rotate(282deg);
+        animation: orange-ani3 15s infinite ease-in-out;
+    }
+
+    @keyframes orange-ani1 {
+        0% {transform: translateY(0%);}
+    50% {transform: translateY(20%);}
+    100% {transform: translateY(0%);}
+    }
+    @keyframes orange-ani2 {
+        0% {transform: translateY(0%) rotate(0deg);}
+    50% {transform: translateY(10%) rotate(-10deg);}
+    100% {transform: translateY(0%) rotate(0deg);}
+    }
+    @keyframes orange-ani3 {
+        0% {transform: translateY(0%) rotate(0);}
+    50% {transform: translateY(20%) rotate(10deg);}
+    100% {transform: translateY(0%) rotate(0);}
+    }
+
+    .leaf1 {
+        position: absolute;
+        top: 0;
+        left: 60%;
+        transform: rotate(0deg);
+        animation: leaf-ani1 15s infinite ease-in-out;
+    }
+    .leaf2 {
+        position: absolute;
+        top: 430px;
+        left: 20%;
+        transform: rotate(159deg);
+        animation: leaf-ani2 15s infinite ease-in-out;
+    }
+    .leaf3 {
+        position: absolute;
+        bottom:20px;
+        left:190px;
+        animation: leaf-ani3 15s infinite ease-in-out;
+    }
+    @keyframes leaf-ani1 {
+        0% {transform: translateX(0%);}
+    50% {transform: translateX(10%);}
+    100% {transform: translateX(0%);}
+    }
+    @keyframes leaf-ani2 {
+        0% {transform: translateY(0%) rotate(0deg);}
+    50% {transform: translateY(10%) rotate(-5deg);}
+    100% {transform: translateY(0%) rotate(0deg);}
+    }
+    @keyframes leaf-ani3 {
+        0% {transform: translateY(0%) rotate(0);}
+    50% {transform: translateY(20%) rotate(10deg);}
+    100% {transform: translateY(0%) rotate(0);}
+    }
+    .peach1 {
+        position: absolute;
+        top: 0px;
+        left: -100px;
+        animation: peach-ani1 15s infinite ease-in-out;
+    }
+    .peach2 {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        animation: peach-ani2 15s infinite ease-in-out;
+    }
+    .peach3 {
+        position: absolute;
+        bottom:0;
+        left:-190px;
+        animation: peach-ani3 15s infinite ease-in-out;
+    }
+    @keyframes peach-ani1 {
+        0% {transform: translateY(0%) rotate(0);}
+    50% {transform: translateY(10%) rotate(0);}
+    100% {transform: translateY(0%) rotate(0);}
+    }
+    @keyframes peach-ani2 {
+        0% {transform: translateY(0%) rotate(0deg);}
+    50% {transform: translateY(10%) rotate(-35deg);}
+    100% {transform: translateY(0%) rotate(0deg);}
+    }
+    @keyframes peach-ani3 {
+        0% {transform: translateY(0%) rotate(0);}
+    50% {transform: translateY(20%) rotate(10deg);}
+    100% {transform: translateY(0%) rotate(0);}
+    }
+
+
+    /* 미놀 제품 - 자세히 보기 */
+    .popup-products .popup-product1-wrap {
+        position:fixed;
+        top:50%;
+        left:50%;
+        width:100%;
+        transform: translate(-50%, -50%);
+        padding:0 1.250rem;
+    }
+    .popup-products .popup-product1-wrap h2 {
+        width:100%;
+        text-align: center;
+    }
+    .popup-products .popup-product1-wrap table {
+        width:100%;
+        font-weight: 200;
+        font-size:14px;
+        margin-bottom:0;
+        background: #fff;
+        overflow-y: auto;
+        min-height:500px;
+        margin:0 10px;
+    }
+    .popup-products .popup-product1-wrap table th {
+        color:#333;
+        font-weight: 300;
+        letter-spacing: -1px;
+        vertical-align: middle;
+        border:1px #ccc solid;
+        border-right:0;
+        height: 125px;
+    }
+    .popup-products .popup-product1-wrap table th span.small {
+        font-size:12px;
+    }
+    .popup-products .popup-product1-wrap table td {
+        width:190px;
+        text-align: left;
+        line-height: 150%;
+        font-weight: 300;
+        color:#333;
+        letter-spacing:-1px;
+        vertical-align: middle;
+        border:1px #ccc solid;
+        padding-left:15px;
+        height: 125px;
+    }
+    .popup-products .popup-product1-wrap table td span {
+        font-weight: 400;
+        color:#4c4c4c;
+    }
+    .popup-products .popup-product1-wrap table td span.small {
+        font-size:12px;
+        font-weight: 300;
+        color:#4c4c4c;
+    }
+    .popup-products .popup-product1-wrap table td span.sub-txt {
+        font-size:14px;
+        font-weight: 300;
+        color:#878787;
+    }
+    .popup-products .popup-product1-wrap table td ul>li.indent {
+        text-indent:-8px;
+        padding-left:7px;
+    }
+    .popup-products .popup-product1-wrap a.btn-file-down {
+        position: fixed;
+        bottom:-150px;
+        left:50%;
+        transform: translate(-50%);
+        display: flex;
+        align-items: center;
+        width:160px;
+        height:40px;
+        border-radius: 50px;
+        color:#f2f2f2;
+        letter-spacing: -1px;
+        background:#4c4c4c url('../img/btn-file-down.png') no-repeat 107px center;
+        padding-left:38px;
+    }
+
+
+
+    /* 나에게 딱 필요한 미놀 제품 찾기 */
+    .product-find-wrap {
+        position: relative;
+        margin:0 auto;
+        background: #f2f9fd;
+    }
+    .product-find {
+        position: relative;
+        width:100%;
+        height:100%;
+        margin:0 auto;
+        letter-spacing: -1px;
+    }
+    .product-find h2 {
+        text-align: center;
+        font-size:1.500rem;
+        line-height: 140%;
+        color:#262626;
+        padding-top:12.500rem;
+        letter-spacing: -1px;
+    }
+    
+    .product-find h3 {
+        color:#4c4c4c;
+        text-align:center;
+        font-size:1.000rem;
+        letter-spacing: -1px;
+    }
+
+    .product-find-banner {
+        position: relative;
+        margin-top:3.750rem;
+        padding-bottom: 60px;
+        z-index: 1;
+    }
+    .product-find-banner a {
+        display: block;
+        padding-bottom:11px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .product-find-banner a.on, a:hover {
+        color:#fff;
+    }
+    .product-find-banner .swiper-pagination-bullet {
+        width:8px;
+        height:8px;
+        background:#969696;
+    }
+    .product-find-banner .swiper-pagination-bullet-active {
+        width:20px;
+        height:8px;
+        border-radius: 5px;
+        background: #0089cf;
+    }
+    .product-find-banner .point1 a{background: url('../img/bg-neck-mo.png') no-repeat 0 0;}
+    .product-find-banner .point2 a{background: url('../img/bg-noise-mo.png') no-repeat;}
+    .product-find-banner .point3 a{background: url('../img/bg-mouse-mo.png') no-repeat;}
+
+    .product-find-banner .point1 a.on, .product-find-banner .point1 a:hover{background-position: -172px 0;}
+    .product-find-banner .point2 a.on, .product-find-banner .point2 a:hover{background-position: -172px 0;}
+    .product-find-banner .point3 a.on, .product-find-banner .point3 a:hover{background-position: -172px 0;}
+
+
+    .product-find .swiper {
+        width: 100%;
+      }
+      .product-find .swiper-wrapper {
+        margin-left:0;
+    }
+    .product-find-banner .swiper-slide {
+        font-size: 1rem;
+        margin:0 5px;
+        width: 210px;
+    }
+
+    .product-find-banner .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    .product-find-banner .swiper-slide:first-child {
+        margin-left:0;
+      }
+    .product-find-banner .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .product-find-banner .point {
+        width:200px;
+        height:200px;
+    }
+    .product-find-banner a {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width:172px;
+        height:179px;
+    }
+    .product-find>div {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .product-find>div ul {
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .product-find>div ul>li {
+        margin:5px;
+    }
+    .product-find>div .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:137px;
+        height:41px;
+        background:#fff;
+        border:1px #4c4c4c solid;
+        border-radius: 30px;
+        font-size:0.750rem;
+    }
+    .product-find>div .btn.on,
+    .product-find>div .btn:hover {
+        background:#0089cf;
+        border:1px transparent;
+        color:#fff;
+    }
+    .product-find>div.detail-3 ul {
+        width:100%;
+        padding:0 50px;
+    }
+
+    /* 제품찾기 */
+    .neck-mo-wrap, .noise-mo-wrap, .mouse-mo-wrap {
+        display:none;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index:2;
+    }
+
+    /* 목 */
+    .neck-mo-wrap .neck {
+        display: flex;
+        position: absolute; 
+        top:0;
+        left:0;
+        flex-direction: column;
+        width:100%;
+        height:100%;
+        background: #f2f9fd;
+        z-index: 30;
+    }
+    .neck-mo-wrap .neck h2 {
+        padding-top:7.5rem;
+        margin-bottom:0.625rem
+    }
+    .neck-mo-wrap .neck h3 {
+        padding-bottom:1.875rem;
+    }
+    .neck-mo-wrap .neck .button {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+    .neck-mo-wrap .neck .button>li {
+        margin:6px;
+    }   
+    .neck-mo-wrap .neck .button>li>a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:137px;
+        height:41px;
+        border:1px #4c4c4c solid;
+        border-radius:50px;
+        background: #f2f9fd;
+        font-size:0.750em;
+        text-align: center;
+    }
+    .neck-mo-wrap .neck .button>li>a:hover, .product-find .neck .button>li>a.on {
+        background:#0089cf;
+        color:#fff;
+        border: 1px transparent;
+    }
+    .neck-mo-wrap .neck .img {
+        position: relative;
+        width:172px;
+        height:172px;
+        margin:0 auto 25px;
+        padding:0;
+        text-align:center;
+    }
+    .neck-mo-wrap .neck .img .mo-btn-back {
+        position:absolute;
+        display:block;
+        top: 50%;
+        left:50%;
+        width:14px;
+        height:27px;
+        transform: translate(-50%, -50%);
+        margin-left:-120px;
+        background:url('../img/btn-back-mo-arrow.png') no-repeat 0 0;
+    }
+
+    /* 코 */
+    .noise-mo-wrap .noise {
+        display: flex;
+        position: absolute; 
+        top:0;
+        left:0;
+        flex-direction: column;
+        width:100%;
+        height:100%;
+        background: #f2f9fd;
+        z-index: 30;
+    }
+    .noise-mo-wrap .noise h2 {
+        padding-top:7.5rem;
+        margin-bottom:0.625rem
+    }
+    .noise-mo-wrap .noise h3 {
+        padding-bottom:1.875rem;
+    }
+    .noise-mo-wrap .noise .button {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+    }
+    .noise-mo-wrap .noise .button>li {
+        margin:6px;
+    }   
+    .noise-mo-wrap .noise .button>li>a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:137px;
+        height:41px;
+        border:1px #4c4c4c solid;
+        border-radius:50px;
+        background: #f2f9fd;
+        font-size:0.750em;
+        text-align: center;
+    }
+    .noise-mo-wrap .noise .button>li>a:hover, .product-find .neck .button>li>a.on {
+        background:#0089cf;
+        color:#fff;
+        border: 1px transparent;
+    }
+    .noise-mo-wrap .noise .img {
+        position: relative;
+        width:172px;
+        height:172px;
+        margin:0 auto 25px;
+        padding:0;
+        text-align:center;
+    }
+    .noise-mo-wrap .noise .img .mo-btn-back {
+        position:absolute;
+        display:block;
+        top: 50%;
+        left:50%;
+        width:14px;
+        height:27px;
+        transform: translate(-50%, -50%);
+        margin-left:-120px;
+        background:url('../img/btn-back-mo-arrow.png') no-repeat 0 0;
+    }
+
+    /* 입 */
+    .mouse-mo-wrap .mouse-care {
+        display: flex;
+        position: absolute; 
+        top:0;
+        left:0;
+        flex-direction: column;
+        width:100%;
+        height:100%;
+        background: #f2f9fd;
+        z-index: 30;
+    }
+    .mouse-mo-wrap .mouse-care h2 {
+        padding-top:7.5rem;
+        margin-bottom:0.625rem
+    }
+    .mouse-mo-wrap .mouse-care h3 {
+        padding-bottom:1.875rem;
+    }
+    .mouse-mo-wrap .mouse-care .button {
+        position: relative;
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin:0 auto;
+    }
+    .mouse-mo-wrap .mouse-care .button>li {
+        margin:6px;
+    }   
+    .mouse-mo-wrap .mouse-care .button>li>a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:137px;
+        height:41px;
+        border:1px #4c4c4c solid;
+        border-radius:50px;
+        background: #f2f9fd;
+        font-size:0.750em;
+        text-align: center;
+    }
+    .mouse-mo-wrap .mouse-care .button>li>a:hover, .product-find .neck .button>li>a.on {
+        background:#0089cf;
+        color:#fff;
+        border: 1px transparent;
+    }
+    .mouse-mo-wrap .mouse-care .img {
+        position: relative;
+        width:172px;
+        height:172px;
+        margin:0 auto 25px;
+        padding:0;
+        text-align:center;
+    }
+    .mouse-mo-wrap .mouse-care .img .mo-btn-back {
+        position:absolute;
+        display:block;
+        top: 50%;
+        left:50%;
+        width:14px;
+        height:27px;
+        transform: translate(-50%, -50%);
+        margin-left:-120px;
+        background:url('../img/btn-back-mo-arrow.png') no-repeat 0 0;
+    }
+
+    /* 제품찾기 결과 */
+    .popup {
+        width:100%;
+    }
+    .popup .title-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 137px;
+        height:41px;
+        border: 1px transparent;
+        border-radius: 50px;
+        background: #0089cf;
+        color:#fff;
+        font-size:0.750rem;
+        text-align: center;
+        padding:0;
+        margin:120px auto 40px;
+    }
+    .neck-pop1 {height:100%;}
+ 
+    /* 부위별 상세페이지 */
+    .product-find .detail-1 {
+        display: none;
+    }
+    .product-find .detail-2 {
+        display: none;
+    }
+    .product-find .detail-3 {
+        display: none;
+    }
+   
+    /* 제품 편의성 강조페이지 */
+    .convenience-wrap {
+        position: relative;
+        width:100%;
+        margin:0 auto;
+        background:#00a9ff;
+        color:#fff;
+    }
+    .convenience-wrap h2 {
+        position:absolute;
+        width:100%;
+        top:calc(50% - 80px);
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 150%;
+        letter-spacing: -2px;
+        font-size:1.5rem;
+        z-index: 90;
+    }
+    .convenience {
+        position: relative;
+        width: 100%;
+        height:100%;
+        margin:0 auto;
+    }
+    .convenience>div {
+        position: relative;
+        font-size:20px;
+        color:#fff;
+        z-index: 90;
+    }
+
+    /* .convenience p {font-size:20px;}
+    .convenience p.point1{position: absolute; top:45px;left:183px;}
+    .convenience p.point2{position: absolute; top:7px;left:810px;}
+    .convenience p.point3{position: absolute; top:148px;left:704px;} */
+
+    .convenience .point1_inner {
+        position:absolute;
+        width:30px;
+        height:30px;
+        top:20%;
+        left:calc(50% - 110px);
+        overflow: hidden;
+        background:#fff url('../img/btn-circle-mo-plus.png') no-repeat 0 0;
+        border-radius: 30px;
+        opacity: 0.8;
+        transition: all 0.3s;
+        z-index:1;
+    }
+    .convenience .point1_inner dl{display: none;padding:0 10px;text-indent:0;}
+    .convenience .point1_inner dl>dt {color:#262626;font-size:1rem;margin:17px 0;line-height:140%;}
+    .convenience .point1_inner dl>dd {color:#4c4c4c;font-size:0.75rem;line-height: 130%;text-indent:-6px;padding-bottom:5px;}
+
+    .convenience .point1_inner.on {
+        position:absolute;
+        top:20%;
+        left:calc(50% - 110px);
+        width:240px;
+        height:240px;
+        color:#000;
+        transform: translate(-10px, -70px);
+        background:#fff url('../img/btn-tooltip-close.png') no-repeat 210px 20px;
+        padding:30px;
+        letter-spacing: -1px;
+        opacity: 0.8;
+        z-index:90;
+    }
+    .convenience .point2_inner {
+        position:absolute;
+        width:30px;
+        height:30px;
+        top:0;
+        left:calc(50% + 50px);
+        overflow: hidden;
+        background:#fff url('../img/btn-circle-mo-plus.png') no-repeat 0 0;
+        border-radius: 30px;
+        opacity: 0.8;
+        transition: all 0.3s;
+        z-index:1;
+    }
+    .convenience .point2_inner dl{display: none;padding:15px 10px;text-indent:0;}
+    .convenience .point2_inner dl>dt {color:#262626;font-size:1rem;margin:17px 0;line-height:140%;}
+    .convenience .point2_inner dl>dd {color:#4c4c4c;font-size:0.75rem;line-height: 130%;text-indent:-6px;padding-bottom:5px;}
+
+    
+    .convenience .point2_inner.on {
+        position:absolute;
+        top:0;
+        left:calc(50% + 50px);
+        width:240px;
+        height:240px;
+        transform: translate(-170px, -20px);
+        color:#000;
+        background:#fff url('../img/btn-tooltip-close.png') no-repeat 210px 20px;
+        padding:30px;
+        letter-spacing: -1px;
+        opacity: 0.8;
+        z-index:90;
+    }
+    .convenience .point3_inner {
+        position:absolute;
+        width:29px;
+        height:29px;
+        top:60%;
+        left:calc(50% + 10px);
+        overflow: hidden;
+        background:#fff url('../img/btn-circle-mo-plus.png') no-repeat 0 0;
+        border-radius: 30px;
+        opacity: 0.8;
+        transition: all 0.3s;
+        z-index:1;
+    }
+    .convenience .point3_inner dl{display: none;padding:20px 10px 10px 10px;text-indent:0;}
+    .convenience .point3_inner dl>dt {color:#262626;font-size:1rem;margin:17px 0;line-height:140%;}
+    .convenience .point3_inner dl>dd {color:#4c4c4c;font-size:0.75rem;line-height: 130%;text-indent:-6px;padding-bottom:5px;}
+    .convenience .point3_inner.on {
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:240px;
+        height:240px;
+        transform: translate(-120px, -160px);
+        color:#000;
+        background:#fff url('../img/btn-tooltip-close.png') no-repeat 210px 20px;
+        padding:20px;
+        letter-spacing: -1px;
+        opacity: 0.8;
+        z-index:90;
+    }    
+    .bg-minol {
+        position: absolute;
+        top:52%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width:389px;
+        height:351px;
+        background: url('../img/bg-minol.png') no-repeat 0 0;
+    }
+    .bg-minol-mo {
+        position: absolute;
+        top:70%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width:241px;
+        height:263px;
+        background: url('../img/bg-minol-mo.png') no-repeat 0 0;
+    }
+
+    /* 영상 */
+    .video-wrap {
+        position:relative;
+        width:100%;
+        height:100%;
+        overflow: hidden;
+    }
+    .video-wrap h2 {
+        position:absolute;
+        width:100%;
+        line-height:130%;
+        top:0;
+        text-align:center;
+        z-index:90;
+        font-size:1.375rem;
+        letter-spacing: -1px;
+        color:#fff;
+        background:#262626;
+        padding:120px 0 60px 0;
+    }
+    .video-wrap>div {
+        position: relative;
+        height:100vh;
+        transform: skewX(-5deg);
+        overflow: hidden;
+    }
+    .video-wrap>div:nth-of-type(1) {
+        position: absolute;
+        width:35%;
+        top:15%;
+        left:-10%;
+        height:100vh;
+        background: #000;
+    }
+    .video-wrap>div:nth-of-type(2) {
+        position: absolute;
+        width:27%;
+        top:15%;
+        left:23%;
+        height:100vh;
+        z-index: 3;
+        background: #000;
+    } 
+    .video-wrap>div:nth-of-type(3) {
+        position: absolute;
+        width:30%;
+        top:14%;
+        left:47%;
+        height:100vh;
+        z-index: 2;
+        background: #000;
+    }
+    .video-wrap>div:nth-of-type(4) {
+        position: absolute;
+        width:45%;
+        top:16%;
+        left:68%;
+        height:100vh;
+        z-index: 1;
+        background: #000;
+    }
+
+    .video-wrap>div{transition: all 1s;}
+    .video-wrap>div>div .video-dim {position:absolute; width:100%;height:100%; background:linear-gradient(to bottom, black, rgb(48, 48, 48)); z-index:70;transition: all 1s;opacity: 0.7;}
+    .video-wrap>div:nth-of-type(1) video {height:100vh; transform:skewX(5deg) scale(0.75) translateX(-44%)}
+    .video-wrap>div:nth-of-type(2) video {height:100vh; transform:skewX(5deg) scale(0.73) translateX(-58%)}
+    .video-wrap>div:nth-of-type(3) video {height:100vh; transform:skewX(5deg) scale(0.75) translateX(-43%)}
+    .video-wrap>div:nth-of-type(4) video {height:100vh; transform:skewX(5deg) scale(0.75) translateX(-45%)}
+    .video-wrap>div.on {transform:skewX(-5deg) scale(1.2) translateX(1%)}
+    .video-wrap>div>div.on .video-dim {opacity:0;z-index:70;}
+    .text {position:absolute;top:50%;left:50%;width:3.750rem;z-index:75;color:#fff;text-align:center;transform:skewX(5deg);font-size:0.875em;line-height:140%;letter-spacing:-2px;}
+    .video1 .text {transform:skewX(5deg) translate(-27%, 2%);}
+    .video2 .text {transform:skewX(5deg) translate(-48%, 3%);}
+    .video3 .text {transform:skewX(5deg) translate(-41%, 24%);}
+    .video4 .text {transform:skewX(5deg) translate(-60%,-10%);}
+
+ 
+    /* 미놀 외 제품 소개 */
+    .popup .popup-product2-wrap {position:fixed;top:50%;left:50%;width:100%;transform: translate(-50%, -50%);padding:0 1.250rem;}
+    .popup .popup-product2-wrap h2 {width:100%; text-align: center;}
+    .popup .popup-product2-wrap table {width:100%;margin-bottom:0;background: #fff;overflow-y: auto;}
+    .popup .popup-product2-wrap table th {color:#262626;}
+    .popup .popup-product2-wrap table td {text-align: left;line-height: 130%;color:#4c4c4c;letter-spacing:-1px;}
+    .popup .popup-product2-wrap table td ul>li.indent {text-indent:-8px;padding-left:7px;}
+
+    /* 미놀 이외의 제품 */
+    .product2-wrap .product2 {
+        position: relative;
+        width:100%;
+    }
+    .product2-wrap .extra {
+        width:100%;
+        height:100%;
+        background:#f2f9fd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .product2-wrap .extra span {
+        color:#0089cf;
+        font-size:0.875rem;
+        display: inline-block;
+        margin-bottom:0.438rem;
+    }
+    .product2-wrap .extra h2 {
+        color:#000;
+        font-size:1.5rem;
+        font-weight: 400;
+        margin-bottom:1.063rem;
+    }
+    .product2-wrap .extra h3 {
+        color:#4c4c4c;
+        font-size:0.875rem;
+        font-weight: 400;
+        margin-bottom:0.625rem;
+        text-align: center;
+        line-height: 130%;
+    }
+    .product2-wrap .button-area {
+        margin:0.625rem 0 2.5rem 0;
+    }
+    .product2-wrap .button-area>ul {
+        display:flex;
+        flex-direction: row;
+        justify-self: center;
+        align-content: center;
+    }
+    .product2-wrap .button-area>ul>li {
+        margin:0 8px;
+    }
+    .product2-wrap .button-area>ul>li:nth-of-type(1) {
+        margin-left:0;
+    }
+    .product2-wrap .button-area>ul>li>a {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:120px;
+        height:40px;
+        border-radius:50px;
+        background: #fff;
+        border:1px #4c4c4c solid;
+        color:#4c4c4c;
+        text-align: center;
+        padding:0;
+        font-size: 0.875rem;
+    }
+    .product2-wrap .button-area>ul>li>a:hover, .product2-wrap .button-area>ul>li>a.on {
+        border:1px transparent solid;
+        background:#0089cf;
+        color:#fff;
+    }
+    .product2-wrap .tag-area>span {
+        display: inline-block;
+        background:#79c1e6;
+        color:#fff;
+        font-size:0.75rem;
+        border-radius: 10px 0 0 0;
+        padding:5px 12px;
+        margin:0 3px;
+    }
+    
+    .product2-wrap .extra .extra-img {
+        position: relative;
+    }
+
+    /* 미놀노즈 점비액 툴팁 */
+    .tooltip-area1  {
+        position: relative;
+    }
+
+    /* part1 */
+    .tooltip-area1 div dl {display:none;color:#fff;padding:80px 20px 30px 30px;box-sizing: border-box;}
+    .tooltip-area1 div dt {font-size:1rem;margin-bottom:8px;}
+    .tooltip-area1 div dd {line-height:140%;font-size:0.750rem;letter-spacing: -1px;}
+    .tooltip-area1 div {background:rgba(48,159,216, 0.7) url('../img/btn-product2-mo-plus.png') 0 0 ; border-radius:50px;}
+    .tooltip-area1 p {font-size:16px; color:#4c4c4c;}
+
+    .tooltip-area1 div.desc1 {position:absolute; overflow: hidden; top:20%; left:20%; width:30px; height:30px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0; border-radius:40px; z-index: 1; transition: all 0.2s;}
+    .tooltip-area1 div.desc2 {position:absolute; overflow: hidden; top:50%; left:65%; width:30px; height:30px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0; border-radius:40px; z-index: 1; transition: all 0.2s;}
+    .tooltip-area1 div.desc3 {position:absolute; overflow: hidden; top:70%; left:20%; width:30px; height:30px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0; border-radius:40px; z-index: 1; transition: all 0.2s;}
+
+    .tooltip-area1 div.on {background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') 0 0 ; border-radius:10px;}
+    .tooltip-area1 div.desc1.on {position:absolute; top:20%; left:0; width:240px; height:240px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+    .tooltip-area1 div.desc2.on {position:absolute; top:20%; left:0; width:240px; height:240px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+    .tooltip-area1 div.desc2.on dl dt {letter-spacing: -2px;}
+    .tooltip-area1 div.desc3.on {position:absolute; top:20%; left:0; width:240px; height:240px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-close.png') no-repeat  14px 15px; border-radius:10px; z-index: 20;}
+
+
+    .tooltip-area2 {position: relative;}
+    /* part 2 */
+    .tooltip-area2 div dl {display:none;color:#fff;padding:80px 20px 30px 30px;box-sizing: border-box;}
+    .tooltip-area2 div dt {font-size:1rem;margin-bottom:8px;}
+    .tooltip-area2 div dd {line-height:140%;font-size:0.750rem;letter-spacing: -1px;}
+    .tooltip-area2 div {background:rgba(48,159,216, 0.7) url('../img/btn-product2-mo-plus.png') 0 0 ; border-radius:50px;}
+    .tooltip-area2 p {font-size:16px; color:#4c4c4c;}
+
+    .tooltip-area2 div.desc1 {position:absolute; overflow: hidden; top:15%; left:15%; width:30px; height:30px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0; border-radius:40px; z-index: 1; transition: all 0.2s;}
+    .tooltip-area2 div.desc2 {position:absolute; overflow: hidden; top:50%; left:68%; width:30px; height:30px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0; border-radius:40px; z-index: 1; transition: all 0.2s;}
+    .tooltip-area2 div.desc3 {position:absolute; overflow: hidden; top:70%; left:17%; width:30px; height:30px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0; border-radius:40px; z-index: 1; transition: all 0.2s;}
+
+    .tooltip-area2 div.on {background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-plus.png') 0 0 ; border-radius:10px;}
+    .tooltip-area2 div.desc1.on {position:absolute; top:20%; left:0; width:240px; height:240px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+    .tooltip-area2 div.desc2.on {position:absolute; top:20%; left:0; width:240px; height:240px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-close.png') no-repeat 14px 15px; border-radius:10px; z-index: 20;}
+    .tooltip-area2 div.desc3.on {position:absolute; top:20%; left:0; width:240px; height:240px; background:rgba(48,159,216, 0.8) url('../img/btn-product2-mo-close.png') no-repeat  14px 15px; border-radius:10px; z-index: 20;}
+
+
+    /* 약국찾기 */
+    .pharmacy-wrap {
+        width:100%;
+        min-height: calc(100% - 450px);
+        padding-top:6.438rem;
+    }
+    .pharmacy {
+        width:100%;
+        margin:0 auto;
+    }
+    .pharmacy-wrap h2 {
+        width:100%;
+        text-align: center;
+        margin-bottom: 1.750rem;
+        font-size:1.5rem;
+        letter-spacing: -1px;
+    }
+    .pharmacy-wrap button {
+        width:121px;
+        border-radius:50px;
+        padding:10px;
+        background:#fff;
+        font-size:0.875rem;
+        color:#4c4c4c;
+        border:1px #4c4c4c solid;
+    }
+    .pharmacy-wrap button:hover,
+    .pharmacy-wrap button.on {
+        background:#0089cf;
+        border:1px transparent solid;
+        color:#fff;
+        cursor: pointer;
+    }
+    .button-wrap {
+        width:425px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .button-wrap:nth-of-type(1) {
+        margin-bottom:12px;
+    }
+    .button-wrap:nth-of-type(2) {
+        margin-bottom:75px;
+    }
+    .pharmacy-wrap button.location {width:200px;}
+    .pharmacy-wrap button.distance {width:120px;}
+
+    .pharmacy-wrap select {
+        width:121px;
+        padding:12px 0 10px 30px;
+        border:1px #4c4c4c solid;
+        border-radius: 50px;
+        font-size:0.875rem;
+        color:#4c4c4c;
+        background: url('../img/bg-selectbox-mo-arrow.png') no-repeat 85px 18px;
+    }
+    /* 셀렉트 박스 가운데 정렬 */
+    select {
+        text-align: left;
+        text-align-last: left;
+        -ms-text-align-last: left;
+        -moz-text-align-last: left;
+        -webkit-appearance: none;
+        -moz-appearance: none; 
+        appearance: none;
+    }
+    .select-wrap {
+        width:256px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin:0 auto 12px;
+    }
+    .location {
+        width:256px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin:0 auto 12px;
+    }
+    .distance.on {
+        width:256px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin:0 auto 12px;
+    }
+    .juso.on {
+        width:256px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin:0 auto 12px;
+    }
+    .juso.on input {
+        width:100%;
+        padding:12px 20px;
+        border:1px #4c4c4c solid;
+        border-radius: 50px;
+        font-size:0.875rem;
+        color:#4c4c4c;
+        box-sizing: border-box;
+        margin-bottom:12px;
+    }
+    .pharmacy-wrap .location button {
+        width:121px;
+        color:#4c4c4c;
+    }
+    .pharmacy-wrap .distance button,
+    .pharmacy-wrap .juso button {
+        width:81px;
+        color:#4c4c4c;
+    }
+
+    .distance-wrap {
+        display: none;
+    }
+    .distance, .juso {
+        display: none;
+    }
+
+    #map {
+        width:100%;
+        height:485px;
+        border-radius:10px;
+        border:1px #dedede solid;
+        margin:70px 0 0 0;
+    }
+
+
+    /* 팝업 */
+    .popup .popup-product-wrap {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background:#eefbff;
+        padding:0;
+    }
+    .popup .popup-product-wrap .dl-wrap {
+        display: block;
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:1.250rem;
+    }
+    .popup .popup-product-wrap .dl-wrap .product-recommand {
+        width: 100%;
+        height:auto;
+        border: 1px #4c4c4c solid;
+        border-radius:10px;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding:1.250rem;
+        margin:0 0 1rem 0;
+    }
+    .popup .popup-product-wrap .dl-wrap .product-recommand dl {
+        display: block;
+        width:auto;
+        height: auto;
+        border:none;
+        background: transparent;
+        padding:0;
+        margin:0;
+        text-align: left;
+    }
+    .popup .popup-product-wrap .dl-wrap .product-recommand > div {
+        min-width:50%;
+    }
+    .popup .popup-product-wrap dl>dt {
+        font-size:0.938rem;
+        color:#000;
+        margin-bottom:0.563rem;
+    }
+    .popup .popup-product-wrap dl>dd {
+        font-size: 0.688rem;
+        line-height: 140%;
+        letter-spacing: -1px;
+        color: #4c4c4c;
+        margin:0;
+    }
+    .popup .popup-product-wrap dl>dd:nth-of-type(1) {
+        margin-bottom:0;
+    }
+    .popup .popup-product-wrap table {
+        width:100%;margin-bottom:23px;
+    }
+    .popup .popup-product-wrap table td {
+        text-align: left;line-height: 120%;
+    }
+
+    /* 팝업 */
+    .popup {
+        display:none;
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width:100%;
+        height:87%;
+        background:transparent;
+        border-radius:0;
+        font-size:1rem;
+        pointer-events: auto;
+        z-index: 1000;
+    }
+    .popup a.btn-out-close {
+        position: relative;
+        top:0;
+        left:calc(100% - 18px);
+        display: block;
+        width:18px;
+        height:18px;
+        margin-bottom:12px;
+        background:url('../img/btn-popup-out-close.png') no-repeat 0 0;
+    }
+    .popup a.btn-terms-close {
+        position: relative;
+        top:calc((50% - 18px) - 260px);
+        left:calc((50% + 18px) + 125px);
+        display: block;
+        width:18px;
+        height:18px;
+        margin-bottom:12px;
+        background:url('../img/btn-popup-out-close.png') no-repeat 0 0;
+    }
+    .popup a.btn-inner-close {
+        position: absolute;
+        top:38px;
+        right:31px;
+        display: block;
+        width:18px;
+        height:18px;
+        background:url('../img/btn-popup-inner-close.png') no-repeat 0 0;
+    }
+    .popup-products {
+        display:none;
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width:100%;
+        height:680px;
+        background:#fff;
+        border-radius:20px;
+        z-index: 1000;
+        font-size:16px;
+        pointer-events: auto;
+    }
+    .popup-products a.btn-close {
+        position: absolute;
+        top:20px;
+        right:20px;
+        display: block;
+        width:22px;
+        height:22px;
+        background:url('../img/btn-popup-products-close.png') no-repeat 0 0;
+        z-index: 1000;
+    }
+    a.btn-file-down {
+        position:relative;
+        top:0;
+        left:0;
+        transform: translate(0);
+        display: flex;
+        align-items: center;
+        width:160px;
+        height:40px;
+        border-radius: 50px;
+        color:#f2f2f2;
+        letter-spacing: -1px;
+        background:#0089cf url('../img/btn-file-down.png') no-repeat 107px center;
+        padding-left:38px;
+        margin:8px auto 0;
+    }
+
+    
+    .popup h2 {margin:110px 0 70px 0; font-size:40px;}
+
+    .popup table {
+        table-layout: fixed;
+        width:100%;
+        height:min-content;
+        border:none;
+        text-align: center;
+        margin:0 auto;
+    }
+    .popup table th,
+    .popup table td {
+        font-size:0.625rem;
+        padding:13px 10px;
+        vertical-align: middle;
+        line-height: 140%;
+    }
+    .popup a.btn-mo-close {
+        position: absolute;
+        top:40px;
+        right:40px;
+        display: block;
+        width:17px;
+        height:17px;
+        background:url('../img/btn-product-popup-close.png') no-repeat 0 0;
+    }
+    .popup .popup-product-wrap a.btn-mo-close {
+        position: absolute;
+        top:30px;
+        right:30px;
+        display: block;
+        width:17px;
+        height:17px;
+        background:url('../img/btn-product-popup-close.png') no-repeat 0 0;
+    }
+    .popup table th {color:#262626; padding:0 3px;}
+    .popup table td {color:#878787;}
+    .popup table td>strong {color:#4c4c4c;font-weight: normal;}
+
+    /* 미놀 제품 */
+    .popup .popup-product1-wrap {
+        position:fixed;
+        top:50%;
+        left:50%;
+        width:100%;
+        transform: translate(-50%, -50%);
+        padding:0 1.250rem;
+    }
+    .popup .popup-product1-wrap h2 {
+        width:100%;
+        text-align: center;
+    }
+    .popup .popup-product1-wrap table {
+        width:100%;
+        font-size:0.625rem;
+        margin-bottom:0;
+        background: #fff;
+        overflow-y: auto;
+    }
+    .popup .popup-product1-wrap table th {
+        font-weight: 500;
+        color:#262626;
+    }
+    .popup .popup-product1-wrap table td {
+        text-align: left;
+        line-height: 130%;
+        color:#4c4c4c;
+        letter-spacing:-1px;
+    }
+    .popup .popup-product1-wrap table td span.sub-txt {
+        color:#878787;
+    }
+    .popup .popup-product1-wrap table td ul>li.indent {
+        text-indent:-8px;
+        padding-left:7px;
+    }
+    .popup .popup-product-qna-wrap a.btn-out-close {
+        position: relative;
+        top:-28px;
+        left:calc(100% - 18px);
+        display: block;
+        width:18px;
+        height:18px;
+        margin-bottom:12px;
+        background:url('../img/btn-popup-out-close.png') no-repeat 0 0;
+    }
+    .minol-table {
+        width:90% !important;
+        margin-top:2rem !important;
+    }
+    .minol-table th {
+        background:#4c4c4c;
+        color:#fff !important;
+        font-weight:500;
+        height:27px;
+        padding:0;
+        letter-spacing:-1px;
+    }
+    .minol-table td {
+        letter-spacing: -1px;
+        color:#4c4c4c;
+        font-weight: 400;
+    }
+
+    /* 팝업 제품 Q&A */
+    .popup .popup-product-qna-wrap {
+        position:fixed;
+        width:320px;
+        height:483px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding:0;
+    }
+    .popup .popup-product-qna-wrap h2 {
+        font-size:1.125rem;
+        font-weight: 500;
+        margin:0.313rem 0 1.250rem 0;
+        color:#262626;
+        text-align:center;
+    }
+    .popup .popup-product-qna-wrap p {
+        font-size:0.750rem;
+        color:#4c4c4c;
+        text-align:center;
+        margin:0;
+        padding:0;
+    }
+    .popup .popup-product-qna-wrap dl {
+        width:100%;
+        padding:0 1.250rem;
+    }
+    .popup .popup-product-qna-wrap dl>dt {
+        color:#000;
+        font-size:0.625rem;
+        border-bottom:1px #949494 solid;
+        text-indent: -22px;
+        padding:8px 0 8px 20px;
+        letter-spacing: -1px;
+    }
+    .popup .popup-product-qna-wrap dl>dd {
+        color:#4c4c4c;
+        font-size:0.625rem;
+        text-indent: -9px;
+        padding:8px 0 8px 8px;
+        line-height: 150%;
+        letter-spacing: -1px;
+    }
+    .popup .popup-product-qna-wrap span {
+        color:#000;
+    }
+    .popup .popup-product-qna-wrap table {
+        text-align: center;
+    }
+    .popup .popup-product2-qna-wrap {
+        position: fixed;
+        top:50%;
+        left:50%;
+        width:320px;
+        transform: translate(-50%, -50%);
+        min-height:483px;
+        background: #fff;
+    }
+    .popup .popup-product2-qna-wrap h2 {
+        font-size:1.125rem;
+        margin:0.438rem 0 1.563rem 0;
+        font-weight: 500;
+        color:#262626;
+        text-align:center;
+    }
+    .popup .popup-product2-qna-wrap p {
+        font-size:0.75rem;
+        color:#4c4c4c;
+        text-align:center;
+        margin:0;
+        padding:0;
+    }
+    .popup .popup-product2-qna-wrap dl {
+        width:100%;
+        padding:0 1.250rem;
+    }
+    .popup .popup-product2-qna-wrap dl>dt {
+        color:#000;
+        font-size:0.625rem;
+        border-bottom:1px #949494 solid;
+        text-indent: -22px;
+        letter-spacing: -1px;
+        padding:8px 20px;
+    }
+    .popup .popup-product2-qna-wrap dl>dd {
+        color:#4c4c4c;
+        font-size:0.625rem;
+        text-indent: -8px;
+        padding:8px 0 8px 8px;
+        line-height: 150%;
+        letter-spacing: -1px;
+    }
+    .popup .popup-product2-qna-wrap span {
+        color:#4c4c4c;
+    }
+    .popup .popup-product2-qna-wrap table {
+        text-align: center;
+    }
+    .popup .popup-product2-qna-wrap a.btn-out-close {
+        position: relative;
+        top:-28px;
+        left:calc(100% - 18px);
+        display: block;
+        width:18px;
+        height:18px;
+        margin-bottom:12px;
+        background:url('../img/btn-popup-out-close.png') no-repeat 0 0;
+    }
+    /* 이용약관 팝업 */
+    .popup-terms-wrap {
+        position: fixed;
+        top:50%;
+        left:50%;
+        width:20rem;
+        height:31.250rem;
+        transform: translate(-10rem, -15.625rem);
+        padding:0;
+        background: #fff;
+        z-index: 1000;
+    }
+    .popup-terms-wrap .terms-box {
+        height:440px;
+        padding:10px 20px 10px 10px;
+        overflow:hidden;
+        overflow-y:scroll;
+        line-height: 140%;
+        font-family: 'Noto Sans KR', sans-serif;
+        letter-spacing: -1px;
+        text-align: justify;
+    }
+    .popup-terms-wrap .terms-box strong {
+        margin:10px 0 3px 0;
+        display: inline-block;
+        color:#333;
+        font-weight: bold;
+        font-size:0.625rem;
+    }
+    .popup-terms-wrap .terms-box p {
+        margin:5px 0;
+        font-size:0.625rem;
+        letter-spacing: -1px;
+        line-height: 160%;
+        color:#333;
+    }
+    .popup-terms-wrap .terms-box p span {
+        letter-spacing: -1.2px;
+    }
+    .popup-terms-wrap h2 {
+        width:100%;
+        margin:0;
+        padding:0.813rem 0 0.813rem 0.625rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size:0.750rem;
+        text-align: left;
+        letter-spacing: -1px;
+        color:#000;
+        border-bottom:1px #ccc solid;
+    }
+
+    /* footer */
+    footer {
+        width:100%;
+        background:#2f2f2f;
+        color:#fff;
+        line-height: 160%;
+        letter-spacing: -1px;
+        font-size: 16px;
+        height:25rem;
+    }
+    .footer-wrap {
+        width: 100%;
+        margin:0 auto;
+        padding:1.875rem 1.250rem 0 1.250rem;
+    }
+    .footer-wrap .util {
+        position: relative;
+        height:2.5rem;
+        display: flex;
+        flex-direction: row;
+        margin-bottom:1.5rem;
+        vertical-align: middle;
+        background: url('../img/bg-util-mo.png') no-repeat right 12px;
+    }
+    .footer-wrap .util .terms {
+        margin-top:-1px;
+    }
+    .footer-wrap .util .terms a {
+        font-size:0.688em;
+        color:#949494;
+    }
+    .footer-wrap .util .company-logo a{
+        display: block;
+        width:7.5rem;
+        margin-right:25px;
+        background: url('../img/company-logo.png') no-repeat 0 0;
+        background-size: contain;
+    }
+    .footer-wrap .util ul.sns {
+        position: absolute;
+        top:17.5rem;
+        left:0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .footer-wrap .util ul.sns li a {
+        display: block;
+        width:34px;
+        height:34px;
+        margin:0 3px;
+        background: url('../img/bg-sns.png') no-repeat;
+    }
+    .footer-wrap .util ul.sns li:nth-of-type(1) a {margin-right:10px; background-position: 0 0;}
+    .footer-wrap .util ul.sns li:nth-of-type(2) a {background-position: -34px 0;}
+    .footer-wrap .util ul.sns li:nth-of-type(3) a {background-position: -68px 0;}
+
+    .footer-wrap .info {
+        position: relative;
+        font-size:0.688rem;
+        line-height: 180%;
+    }
+    .footer-wrap .info select {text-align:left !important;}
+    .footer-wrap .info a {color:#fff;}
+    .footer-wrap .info .family-site {
+        position: absolute;
+        bottom:0;
+        right:0;
+        width:200px;
+        height:44px;
+        border-radius: 50px;
+        border: none;
+        color:#fff;
+        text-align-last: left;
+        padding-left:30px;
+        background: #0089cf url('../img/bg-selectbox-arrow-up.png') no-repeat 160px center;
+    }
+    .footer-wrap .info .customer-center {
+        position: relative;
+        font-size:0.813rem;
+        line-height: 150%;
+        letter-spacing: -1px;
+    }
+    .footer-wrap .info .customer-center span {
+        display: block;
+        font-size:1.625rem;
+        margin:0.313rem 0 3.125rem 0;
+    }
+    .footer-wrap .info address {
+        font-style: normal;
+    }
+    .footer-wrap .info .copyright {
+        margin-top:75px;
+        color:#949494;
+    }
+}
