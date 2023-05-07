@@ -10,7 +10,12 @@
     <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.css" />
     <link rel="stylesheet" type="text/css" href="/css/minol.css">
 
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=l2o6xz5abj&submodules=geocoder"></script>
+    <th:block th:if="${@environment.getProperty('spring.config.activate.on-profile') == 'local'}">
+        <script th:inline="javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=l2o6xz5abj&submodules=geocoder"></script>
+    </th:block>
+    <th:block th:if="${@environment.getProperty('spring.config.activate.on-profile') == 'prod'}">
+        <script th:inline="javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=bsj7qymjt7&submodules=geocoder"></script>
+    </th:block>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
     <title>미놀 - 간편하고 효과 빠른!</title>
