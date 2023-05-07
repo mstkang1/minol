@@ -8,7 +8,7 @@ $(function() {
     });
 
     
-    // 주변 약국찾기
+    /*// 주변 약국찾기
     $('.location button').each(function(idx) {
         $(this).on('click', function(e) {
             e.preventDefault();
@@ -36,7 +36,7 @@ $(function() {
             $(this).addClass('on');
             $(this).siblings().removeClass('on');
         });
-    });
+    });*/
 });
 
 
