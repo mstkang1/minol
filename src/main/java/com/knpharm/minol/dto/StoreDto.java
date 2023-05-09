@@ -1,10 +1,10 @@
-package com.knpharm.minol.domain;
+package com.knpharm.minol.dto;
 
 import lombok.Data;
 
 
 @Data
-public class StoreVO {
+public class StoreDto {
     private int storeSeq;
 
     private String brandCode;

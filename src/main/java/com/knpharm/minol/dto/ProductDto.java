@@ -1,9 +1,9 @@
-package com.knpharm.minol.domain;
+package com.knpharm.minol.dto;
 
 import lombok.Data;
 
 @Data
-public class ProductVO {
+public class ProductDto {
     private String productName;
     private String brandCode;
     private int productOrder;
