@@ -8,8 +8,8 @@ $(function() {
     });
 
     
-    /*// 주변 약국찾기
-    $('.location button').each(function(idx) {
+    // 주변 약국찾기
+    /*$('.location button').each(function(idx) {
         $(this).on('click', function(e) {
             e.preventDefault();
             // console.log(idx);

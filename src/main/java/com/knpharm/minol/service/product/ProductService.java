@@ -5,6 +5,8 @@ import com.knpharm.minol.dto.ProductDto;
 import java.util.List;
 
 public interface ProductService {
-    List<ProductDto> selectProductList(ProductDto productDto) throws Exception;
+    List<ProductDto> selectProductList(String brandCode) throws Exception;
+
+    ProductDto selectProduct(String productName) throws Exception;
 
 }

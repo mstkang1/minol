@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../js/jquery.fullpage.min.js"></script>
+    <script src="js/jquery.fullpage.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="../js/minol.js"></script>
-    <link rel="stylesheet" href="../css/jquery.fullpage.css" />
-    <link rel="stylesheet" href="../css/minol.css">
+    <script src="js/minol.js"></script>
+    <link rel="stylesheet" href="css/jquery.fullpage.css" />
+    <link rel="stylesheet" href="css/minol.css">
     <title>미놀 - 간편하고 효과 빠른!</title>
 </head>
+
 <body>
     <div class="dim"></div>
     <div class="dim-products"></div>
     <!-- // 모바일 메뉴, 팝업 활성화 시 배경 어둡게 처리 -->
     <header id="headerMenu">
         <div class="header-wrap">
-            <h1 data-menuanchor="main" class="pc"><a href="index.html#main"><img src="../img/logo.png" alt="미놀 로고"></a></h1>
-            <h1 data-menuanchor="main" class="mo"><a href="index.html#main"><img src="../img/mo-logo.png" alt="미놀 로고"></a></h1>
+            <h1 data-menuanchor="main" class="pc"><a href="index.html#main"><img src="img/logo.png" alt="미놀 로고"></a>
+            </h1>
+            <h1 data-menuanchor="main" class="mo"><a href="index.html#main"><img src="img/mo-logo.png" alt="미놀 로고"></a>
+            </h1>
             <nav>
                 <div class="btn-menu-close mo">
-                    <img src="../img/btn-menu-close.png" alt="메뉴 닫기버튼">
+                    <img src="img/btn-menu-close.png" alt="메뉴 닫기버튼">
                 </div>
                 <div class="mo-menu-head mo">
-                    <img src="../img/mo-logo2.png" alt="미놀 로고">
+                    <img src="img/mo-logo2.png" alt="미놀 로고">
                 </div>
                 <ul>
                     <li data-menuanchor="story"><a href="#story">브랜드 스토리</a></li>
@@ -36,40 +40,43 @@
         </div>
     </header>
     <div class="btn-menu-open mo">
-        <img src="../img/btn-menu-open.png" alt="메뉴 열기버튼">
+        <img src="img/btn-menu-open.png" alt="메뉴 열기버튼">
     </div>
-    <div id="fullpage">
+    <div id="fullpage"> 
         <!-- 상단배너 영역 -->
-            <div class="section">
-            
+        <div class="section">
+
             <!-- 메인배너 swiper -->
             <div class="main-banner-wrap">
                 <div class="swiper main-banner pc">
                     <div class="swiper-wrapper">
-
-                        <div class="swiper-slide"><img src="/img/banner1.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="/img/banner2.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="/img/banner3.jpg" alt=""></div>
+                        <div class="swiper-slide slide01"></div>
+                        <div class="swiper-slide slide02"></div>
+                        <div class="swiper-slide slide03"></div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
-                
+
                 <div class="swiper main-banner-mo mo">
                     <div class="swiper-wrapper">
 
-                        <div class="swiper-slide"><img src="/img/mo-banner1.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="/img/mo-banner2.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="/img/mo-banner3.jpg" alt=""></div>
+                        <div class="swiper-slide slide04"></div>
+                        <div class="swiper-slide slide05"></div>
+                        <div class="swiper-slide slide06"></div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
                 </div>
             </div>
 
             <div class="scrolldown-wrap pc">
                 <div class="scrolldown">
                     <div class="arrow">
-                        <img src="../img/down-arrow.png" alt="마우스 휠 아래로 방향" class="down-arrow">
+                        <img src="img/down-arrow.png" alt="마우스 휠 아래로 방향" class="down-arrow">
                     </div>
                 </div>
             </div>
@@ -82,7 +89,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- 미놀의 역사 -->
         <div class="section">
             <div class="history-wrap">
@@ -92,7 +99,7 @@
                         <div class="swiper-slide">
                             <div class="script-wrap">
                                 <div class="productImg">
-                                    <img src="../img/history-img-01.png" alt="미놀 트로키">
+                                    <img src="img/history-img-01.png" alt="미놀 트로키">
                                 </div>
                                 <dl>
                                     <dt>미놀트로키</dt>
@@ -107,7 +114,7 @@
                         <div class="swiper-slide">
                             <div class="script-wrap">
                                 <div class="productImg">
-                                    <img src="../img/history-img-02.png" alt="미놀에프트로키">
+                                    <img src="img/history-img-02.png" alt="미놀에프트로키">
                                 </div>
                                 <dl>
                                     <dt>미놀에프트로키</dt>
@@ -122,7 +129,7 @@
                         <div class="swiper-slide">
                             <div class="script-wrap">
                                 <div class="productImg">
-                                    <img src="../img/history-img-03.png" alt="미놀노즈점비액">
+                                    <img src="img/history-img-03.png" alt="미놀노즈점비액">
                                 </div>
                                 <dl>
                                     <dt>미놀노즈점비액</dt>
@@ -137,7 +144,7 @@
                         <div class="swiper-slide">
                             <div class="script-wrap">
                                 <div class="productImg">
-                                    <img src="../img/history-img-04.png" alt="리놀에스트로키">
+                                    <img src="img/history-img-04.png" alt="리놀에스트로키">
                                 </div>
                                 <dl>
                                     <dt>리놀에스트로키</dt>
@@ -151,7 +158,7 @@
                         <div class="swiper-slide">
                             <div class="script-wrap">
                                 <div class="productImg">
-                                    <img src="../img/history-img-05.png" alt="이비나액">
+                                    <img src="img/history-img-05.png" alt="이비나액">
                                 </div>
                                 <dl>
                                     <dt>이비나액</dt>
@@ -175,7 +182,7 @@
                         <li><a href="#" id="history5">2021. 07<br><span>이비나액</span></a></li>
                     </ul>
                     <div class="tab-progressive">
-                        <span class="circle"><img src="../img/minol-circle.png" alt=""></span>
+                        <span class="circle"><img src="img/minol-circle.png" alt=""></span>
                         <div class="bar">
                             <span></span>
                         </div>
@@ -185,33 +192,35 @@
                 <div class="swiper history-mo mo">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="img"><img src="../img/img-history-product-mo-01.png" alt=""></div>
+                            <div class="img"><img src="img/img-history-product-mo-01.png" alt=""></div>
                             <div class="date">1985. 06</div>
                             <div class="title">미놀트로키</div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="img"><img src="../img/img-history-product-mo-02.png" alt=""></div>
+                            <div class="img"><img src="img/img-history-product-mo-02.png" alt=""></div>
                             <div class="date">2012. 01</div>
                             <div class="title">미놀에프트로키</div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="img"><img src="../img/img-history-product-mo-03.png" alt=""></div>
+                            <div class="img"><img src="img/img-history-product-mo-03.png" alt=""></div>
                             <div class="date">2017. 11</div>
                             <div class="title">미놀노즐점비액</div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="img"><img src="../img/img-history-product-mo-04.png" alt=""></div>
+                            <div class="img"><img src="img/img-history-product-mo-04.png" alt=""></div>
                             <div class="date">2020. 05</div>
                             <div class="title">리놀에스트로키</div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="img"><img src="../img/img-history-product-mo-05.png" alt=""></div>
+                            <div class="img"><img src="img/img-history-product-mo-05.png" alt=""></div>
                             <div class="date">2021. 07</div>
                             <div class="title">이비나액</div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                  </div>
+                    <div class="product-button-next"></div>
+                    <div class="product-button-prev"></div>
+                </div>
             </div>
         </div>
 
@@ -220,14 +229,15 @@
             <h2>모든 미놀 제품 알아보기</h2>
             <div class="circle1"></div>
             <div class="circle2"></div>
-            
+
             <!-- 모든 미놀 제품 알아보기 : PC -->
             <div class="swiper product-banner pc">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product1">
                         <p class="title">미놀에프트로키</p>
                         <p class="taste">페퍼민트맛</p>
-                        <p class="product"><a data-menuanchor="product1" href="#product1"><img src="../img/img-product-01.png" alt=""></a></p>
+                        <p class="product"><a data-menuanchor="product1" href="#product1"><img
+                                    src="img/img-product-01.png" alt=""></a></p>
                         <p class="desc">목 아플 때 효과 빠른!<br>
                             인후염 / 기침 / 목쉼 / 가래 등<br>
                             초기 목감기 증상 완화</p>
@@ -235,7 +245,8 @@
                     <div class="swiper-slide product2">
                         <p class="title">미놀에프트로키</p>
                         <p class="taste">오렌지맛</p>
-                        <p class="product"><a data-menuanchor="product1" href="#product1"><img src="../img/img-product-02.png" alt=""></a></p>
+                        <p class="product"><a data-menuanchor="product1" href="#product1"><img
+                                    src="img/img-product-02.png" alt=""></a></p>
                         <p class="desc">목 아플 때 효과 빠른!<br>
                             인후염 / 기침 / 목쉼 / 가래 등<br>
                             초기 목감기 증상 완화</p>
@@ -243,28 +254,32 @@
                     <div class="swiper-slide product3">
                         <p class="title">미놀에프트로키</p>
                         <p class="taste">복숭아맛</p>
-                        <p class="product"><a data-menuanchor="product1" href="#product1"><img src="../img/img-product-03.png" alt=""></a></p>
+                        <p class="product"><a data-menuanchor="product1" href="#product1"><img
+                                    src="img/img-product-03.png" alt=""></a></p>
                         <p class="desc">목 아플 때 효과 빠른!<br>
                             인후염 / 기침 / 목쉼 / 가래 등<br>
                             초기 목감기 증상 완화</p>
                     </div>
                     <div class="swiper-slide product4">
                         <p class="title">리놀에스트로키</p>
-                        <p class="product"><a data-menuanchor="extra1" href="#extra1"><img src="../img/img-product-04.png" alt=""></a></p>
+                        <p class="product"><a data-menuanchor="extra1" href="#extra1"><img src="img/img-product-04.png"
+                                    alt=""></a></p>
                         <p class="desc">목 아플 때 효과 빠른!<br>
-                            목이 따끔따끔 아플 때,<br> 
+                            목이 따끔따끔 아플 때,<br>
                             목의 불쾌감 완화</p>
                     </div>
                     <div class="swiper-slide product5">
                         <p class="title">미놀노즈점비액</p>
-                        <p class="product"><a data-menuanchor="extra2" href="#extra2"><img src="../img/img-product-05.png" alt=""></a></p>
+                        <p class="product"><a data-menuanchor="extra2" href="#extra2"><img src="img/img-product-05.png"
+                                    alt=""></a></p>
                         <p class="desc">답답한 코! 시원하게!<br>
                             코감기, 비염, 부비동염에 의한<br>
                             코막힘/콧물/재채기 증상 완화</p>
                     </div>
                     <div class="swiper-slide product6">
                         <p class="title">이비나액</p>
-                        <p class="product"><a data-menuanchor="extra3" href="#extra3"><img src="../img/img-product-06.png" alt=""></a></p>
+                        <p class="product"><a data-menuanchor="extra3" href="#extra3"><img src="img/img-product-06.png"
+                                    alt=""></a></p>
                         <p class="desc">가글가글~<br>
                             빠르고 간편한 구강염증 치료제<br>
                             치은염/구내염/인두염 등에 효과</p>
@@ -281,7 +296,8 @@
                         <div class="text-circle">
                             <p class="title">미놀에프트로키</p>
                             <p class="taste">페퍼민트맛</p>
-                            <p class="product"><a data-menuanchor="product1" href="#product1"><img src="../img/img-product-mo-01.png" alt=""></a></p>
+                            <p class="product"><a data-menuanchor="product1" href="#product1"><img
+                                        src="img/img-product-mo-01.png" alt=""></a></p>
                         </div>
                         <p class="desc">목 아플 때 효과 빠른!<br>
                             인후염 / 기침 / 목쉼 / 가래 등<br>
@@ -291,7 +307,8 @@
                         <div class="text-circle">
                             <p class="title">미놀에프트로키</p>
                             <p class="taste">오렌지맛</p>
-                            <p class="product"><a data-menuanchor="product1" href="#product1"><img src="../img/img-product-mo-02.png" alt=""></a></p>
+                            <p class="product"><a data-menuanchor="product1" href="#product1"><img
+                                        src="img/img-product-mo-02.png" alt=""></a></p>
                         </div>
                         <p class="desc">목 아플 때 효과 빠른!<br>
                             인후염 / 기침 / 목쉼 / 가래 등<br>
@@ -301,7 +318,8 @@
                         <div class="text-circle">
                             <p class="title">미놀에프트로키</p>
                             <p class="taste">복숭아맛</p>
-                            <p class="product"><a data-menuanchor="product1" href="#product1"><img src="../img/img-product-mo-03.png" alt=""></a></p>
+                            <p class="product"><a data-menuanchor="product1" href="#product1"><img
+                                        src="img/img-product-mo-03.png" alt=""></a></p>
                         </div>
                         <p class="desc">목 아플 때 효과 빠른!<br>
                             인후염 / 기침 / 목쉼 / 가래 등<br>
@@ -310,16 +328,18 @@
                     <div class="swiper-slide product4">
                         <div class="text-circle">
                             <p class="title">리놀에스트로키</p>
-                            <p class="product"><a data-menuanchor="extra1" href="#extra1"><img src="../img/img-product-mo-04.png" alt=""></a></p>
+                            <p class="product"><a data-menuanchor="extra1" href="#extra1"><img
+                                        src="img/img-product-mo-04.png" alt=""></a></p>
                         </div>
                         <p class="desc">목 아플 때 효과 빠른!<br>
-                            목이 따끔따끔 아플 때,<br> 
+                            목이 따끔따끔 아플 때,<br>
                             목의 불쾌감 완화</p>
                     </div>
                     <div class="swiper-slide product5">
                         <div class="text-circle">
                             <p class="title">미놀노즈점비액</p>
-                            <p class="product"><a data-menuanchor="extra2" href="#extra2"><img src="../img/img-product-mo-05.png" alt=""></a></p>
+                            <p class="product"><a data-menuanchor="extra2" href="#extra2"><img
+                                        src="img/img-product-mo-05.png" alt=""></a></p>
                         </div>
                         <p class="desc">답답한 코! 시원하게!<br>
                             코감기, 비염, 부비동염에 의한<br>
@@ -328,7 +348,8 @@
                     <div class="swiper-slide product6">
                         <div class="text-circle">
                             <p class="title">이비나액</p>
-                            <p class="product"><a data-menuanchor="extra3" href="#extra3"><img src="../img/img-product-mo-06.png" alt=""></a></p>
+                            <p class="product"><a data-menuanchor="extra3" href="#extra3"><img
+                                        src="img/img-product-mo-06.png" alt=""></a></p>
                         </div>
                         <p class="desc">가글가글~<br>
                             빠르고 간편한 구강염증 치료제<br>
@@ -337,12 +358,12 @@
                 </div>
                 <div class="product-button-next"></div>
                 <div class="product-button-prev"></div>
-              </div>
+            </div>
         </div>
 
         <!-- 목 아플 때 효과 빠른 미놀에프트로키 -->
         <div class="section product">
-            
+
             <!-- 목 아플 때 효과 빠른 미놀에프트로키 : PC -->
             <div class="product1-wrap pc">
                 <div class="title">
@@ -359,26 +380,26 @@
                 <ul class="ani-part">
                     <li>
                         <div class="orange">
-                            <div class="minol-orange"><img src="../img/img-product-ani-01.png" alt=""></div>
-                            <div class="orange1"><img src="../img/img-orange-01.png" alt=""></div>
-                            <div class="orange2"><img src="../img/img-orange-02.png" alt=""></div>
-                            <div class="orange3"><img src="../img/img-orange-03.png" alt=""></div>
+                            <div class="minol-orange"><img src="img/img-product-ani-01.png" alt=""></div>
+                            <div class="orange1"><img src="img/img-orange-01.png" alt=""></div>
+                            <div class="orange2"><img src="img/img-orange-02.png" alt=""></div>
+                            <div class="orange3"><img src="img/img-orange-03.png" alt=""></div>
                         </div>
                     </li>
                     <li>
                         <div class="mint">
-                            <div class="minol-mint"><img src="../img/img-product-ani-02.png" alt=""></div>
-                            <div class="leaf1"><img src="../img/img-leaf-01.png" alt=""></div>
-                            <div class="leaf2"><img src="../img/img-leaf-02.png" alt=""></div>
-                            <div class="leaf3"><img src="../img/img-leaf-03.png" alt=""></div>
+                            <div class="minol-mint"><img src="img/img-product-ani-02.png" alt=""></div>
+                            <div class="leaf1"><img src="img/img-leaf-01.png" alt=""></div>
+                            <div class="leaf2"><img src="img/img-leaf-02.png" alt=""></div>
+                            <div class="leaf3"><img src="img/img-leaf-03.png" alt=""></div>
                         </div>
                     </li>
                     <li>
                         <div class="peach">
-                            <div class="minol-peach"><img src="../img/img-product-ani-03.png" alt=""></div>
-                            <div class="peach1"><img src="../img/img-peach-01.png" alt=""></div>
-                            <div class="peach2"><img src="../img/img-peach-02.png" alt=""></div>
-                            <div class="peach3"><img src="../img/img-peach-03.png" alt=""></div>
+                            <div class="minol-peach"><img src="img/img-product-ani-03.png" alt=""></div>
+                            <div class="peach1"><img src="img/img-peach-01.png" alt=""></div>
+                            <div class="peach2"><img src="img/img-peach-02.png" alt=""></div>
+                            <div class="peach3"><img src="img/img-peach-03.png" alt=""></div>
                         </div>
                     </li>
                 </ul>
@@ -388,7 +409,7 @@
                 <div class="title">
                     <p>목 아플 때 효과 빠른</p>
                     <h2>미놀에프트로키</h2>
-                    <h3>인후염/기침/가래 등<br >
+                    <h3>인후염/기침/가래 등<br>
                         초기 목감기 증상 완화를 위한 감기약</h3>
                     <div class="minol-wrap">
                         <ul>
@@ -400,26 +421,26 @@
                 <ul class="ani-part">
                     <li>
                         <div class="orange">
-                            <div class="minol-orange"><img src="../img/img-product-ani-mo-01.png" alt=""></div>
-                            <div class="orange1"><img src="../img/img-orange-mo-01.png" alt=""></div>
-                            <div class="orange2"><img src="../img/img-orange-mo-02.png" alt=""></div>
-                            <div class="orange3"><img src="../img/img-orange-mo-03.png" alt=""></div>
+                            <div class="minol-orange"><img src="img/img-product-ani-mo-01.png" alt=""></div>
+                            <div class="orange1"><img src="img/img-orange-mo-01.png" alt=""></div>
+                            <div class="orange2"><img src="img/img-orange-mo-02.png" alt=""></div>
+                            <div class="orange3"><img src="img/img-orange-mo-03.png" alt=""></div>
                         </div>
                     </li>
                     <li>
                         <div class="mint">
-                            <div class="minol-mint"><img src="../img/img-product-ani-mo-02.png" alt=""></div>
-                            <div class="leaf1"><img src="../img/img-leaf-mo-01.png" alt=""></div>
-                            <div class="leaf2"><img src="../img/img-leaf-mo-02.png" alt=""></div>
-                            <div class="leaf3"><img src="../img/img-leaf-mo-03.png" alt=""></div>
+                            <div class="minol-mint"><img src="img/img-product-ani-mo-02.png" alt=""></div>
+                            <div class="leaf1"><img src="img/img-leaf-mo-01.png" alt=""></div>
+                            <div class="leaf2"><img src="img/img-leaf-mo-02.png" alt=""></div>
+                            <div class="leaf3"><img src="img/img-leaf-mo-03.png" alt=""></div>
                         </div>
                     </li>
                     <li>
                         <div class="peach">
-                            <div class="minol-peach"><img src="../img/img-product-ani-mo-03.png" alt=""></div>
-                            <div class="peach1"><img src="../img/img-peach-mo-01.png" alt=""></div>
-                            <div class="peach2"><img src="../img/img-peach-mo-02.png" alt=""></div>
-                            <div class="peach3"><img src="../img/img-peach-mo-03.png" alt=""></div>
+                            <div class="minol-peach"><img src="img/img-product-ani-mo-03.png" alt=""></div>
+                            <div class="peach1"><img src="img/img-peach-mo-01.png" alt=""></div>
+                            <div class="peach2"><img src="img/img-peach-mo-02.png" alt=""></div>
+                            <div class="peach3"><img src="img/img-peach-mo-03.png" alt=""></div>
                         </div>
                     </li>
                 </ul>
@@ -483,7 +504,7 @@
             <div class="product-find mo">
                 <h2>나에게 딱 필요한<br>미놀 제품 찾기</h2>
                 <h3>아픈 부위를 선택해주세요!</h3>
-                
+
                 <div class="swiper product-find-banner">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -504,6 +525,8 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                    <div class="product-button-next"></div>
+                    <div class="product-button-prev"></div>
                 </div>
                 <div class="region">
                     <div class="neck-mo-wrap">
@@ -512,7 +535,7 @@
                             <h3>아픈 부위를 선택해주세요!</h3>
                             <div class="img">
                                 <a href="#" class="mo-btn-back"><span class="hide">뒤로 가기</span></a>
-                                <img src="../img/img-neck-mo.png" alt="">
+                                <img src="img/img-neck-mo.png" alt="">
                             </div>
                             <ul class="button">
                                 <li><a href="javascript:openPopup('neck-pop1')">#목감기 초기</a></li>
@@ -530,7 +553,7 @@
                             <h3>아픈 부위를 선택해주세요!</h3>
                             <div class="img">
                                 <a href="#" class="mo-btn-back"><span class="hide">뒤로 가기</span></a>
-                                <div class="img"><img src="../img/img-noise-mo.png" alt=""></div>
+                                <div class="img"><img src="img/img-noise-mo.png" alt=""></div>
                             </div>
                             <ul class="button">
                                 <li><a href="javascript:openPopup('noise-pop1')">#비염 / 콧물</a></li>
@@ -546,7 +569,7 @@
                             <h3>아픈 부위를 선택해주세요!</h3>
                             <div class="img">
                                 <a href="#" class="mo-btn-back"><span class="hide">뒤로 가기</span></a>
-                                <img src="../img/img-mouse-mo.png" alt="">
+                                <img src="img/img-mouse-mo.png" alt="">
                             </div>
                             <ul class="button">
                                 <li><a href="javascript:openPopup('mouse-pop1')">#치은(잇몸)염</a></li>
@@ -557,17 +580,17 @@
                     </div>
                 </div>
             </div>
-            </div>
-            
+        </div>
+
 
         <!-- 제품 : 미놀 에프트로키 편의성 강조페이지 -->
         <div class="section convenience-wrap">
-            
+
             <!-- 제품 : 미놀 에프트로키 편의성 강조페이지 : PC -->
             <div class="convenience pc">
                 <h2>미놀은 트로키 제형으로 빠른 염증완화!<br>
                     기침, 가래, 인후통을 한번에!</h2>
-                
+
                 <p class="point1">언제 어디서든 간편하게</p>
                 <div class="point1_inner">
                     <dl>
@@ -637,8 +660,8 @@
                     <div class="video1">
                         <div class="text">회사에서도<br>간편하게</div>
                         <div class="video-dim"></div>
-                        <video preload="auto" poster="../img/video1.jpg" id="video1" playsinline loop muted>
-                            <source src="../video/01.mp4" type="video/mp4">
+                        <video preload="auto" poster="img/video1.png" id="video1" playsinline loop muted>
+                            <source src="video/01.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -646,8 +669,8 @@
                     <div class="video2">
                         <div class="text">운전 중에도<br>간편하게</div>
                         <div class="video-dim"></div>
-                        <video preload="auto" poster="../img/video2.jpg" id="video2" playsinline loop muted>
-                            <source src="../video/02.mp4" type="video/mp4">
+                        <video preload="auto" poster="img/video2.png" id="video2" playsinline loop muted>
+                            <source src="video/02.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -655,8 +678,8 @@
                     <div class="video3">
                         <div class="text">수업 중에도<br>간편하게</div>
                         <div class="video-dim"></div>
-                        <video preload="auto" poster="../img/video3.jpg" id="video3" playsinline loop muted>
-                            <source src="../video/03.mp4" type="video/mp4">
+                        <video preload="auto" poster="img/video3.png" id="video3" playsinline loop muted>
+                            <source src="video/03.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -664,8 +687,8 @@
                     <div class="video4">
                         <div class="text">물 없을 때도<br>간편하게</div>
                         <div class="video-dim"></div>
-                        <video preload="auto" poster="../img/video4.jpg" id="video4" playsinline loop muted>
-                            <source src="../video/04.mp4" type="video/mp4">
+                        <video preload="auto" poster="img/video4.png" id="video4" playsinline loop muted>
+                            <source src="video/04.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -676,7 +699,7 @@
         <div class="section product2-wrap">
             <div class="product2 renol pc">
                 <div class="photo">
-                    <img src="../img/img-product2-01.png" alt="리놀에스트로키">
+                    <img src="img/img-product2-01.png" alt="리놀에스트로키">
                     <span></span>
                 </div>
                 <div class="description">
@@ -705,7 +728,7 @@
                         </ul>
                     </div>
                     <div class="extra-img">
-                        <img src="../img/img-product-extra-mo-01.png" alt="">
+                        <img src="img/img-product-extra-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -713,11 +736,11 @@
         <div class="section product2-wrap">
             <div class="product2 pc">
                 <div class="photo">
-                    <img src="../img/img-product2-02.png" alt="미놀노즈점비액">
+                    <img src="img/img-product2-02.png" alt="미놀노즈점비액">
                     <span></span>
                     <!-- 미놀노즈 점비액 툴팁 영역-->
                     <div class="tooltip-area1">
-                        
+
                         <p class="title1">충분히 사용할 수<br>있는 15ml</p>
                         <p class="title2">12시간 지속 효과</p>
                         <p class="title3">No 스테로이드</p>
@@ -751,8 +774,8 @@
                     <h2>미놀노즈점비액</h2>
                     <p class="txt">코감기, 알레르기성 비염, 부비동염에 의한<br>
                         코막힘과 콧물, 재채기 등에 효과 빠른 치료제</p>
-                        <span>#부비동염</span> <span>#알레르기비염</span>
-                        <div class="button-area">
+                    <span>#부비동염</span> <span>#알레르기비염</span>
+                    <div class="button-area">
                         <ul>
                             <li><a href="javascript:openProductsPopup('product2-pop2');">자세히 보기</a></li>
                             <li><a href="javascript:openProductsPopup('product2-qna2');">Q&amp;A</a></li>
@@ -777,10 +800,10 @@
                         </ul>
                     </div>
                     <div class="extra-img">
-                        
+
                         <!-- 미놀노즈 점비액 툴팁 영역-->
                         <div class="tooltip-area1">
-                            <img src="../img/img-product-extra-mo-02.png" alt="">
+                            <img src="img/img-product-extra-mo-02.png" alt="">
                             <div class="desc1">
                                 <dl>
                                     <dt>충분히 사용할 수 있는 15ml</dt>
@@ -812,11 +835,11 @@
         <div class="section product2-wrap">
             <div class="product2 pc">
                 <div class="photo">
-                    <img src="../img/img-product2-03.png" alt="">
+                    <img src="img/img-product2-03.png" alt="">
                     <span></span>
                     <!-- 이비나액 영역-->
                     <div class="tooltip-area2">
-    
+
                         <p class="title1">휴대사용이<br>간편한 파우치형</p>
                         <p class="title2">가글형</p>
                         <p class="title3">No 스테로이드</p>
@@ -849,8 +872,8 @@
                     <strong>언제 어디서든 간편하게</strong>
                     <h2>이비나액</h2>
                     <p class="txt">빠르고 간편한 가글형 구강인두 염증 치료제</p>
-                        <span>#구내염</span> <span>#치은(잇몸)염</span> <span>#인두염</span>
-                        <div class="button-area">
+                    <span>#구내염</span> <span>#치은(잇몸)염</span> <span>#인두염</span>
+                    <div class="button-area">
                         <ul>
                             <li><a href="javascript:openProductsPopup('product2-pop3');">자세히 보기</a></li>
                             <li><a href="javascript:openProductsPopup('product2-qna3');">Q&amp;A</a></li>
@@ -875,7 +898,7 @@
                         </ul>
                     </div>
                     <div class="tooltip-area2">
-                        <img src="../img/img-product-extra-mo-03.png" alt="">
+                        <img src="img/img-product-extra-mo-03.png" alt="">
 
                         <div class="desc1">
                             <dl>
@@ -899,7 +922,7 @@
                                     사용하여 부작용이 적고 진통효과에 빠름</dd>
                             </dl>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -909,26 +932,32 @@
             <footer>
                 <div class="footer-wrap">
                     <div class="util">
-                        <div class="company-logo"><a href="http://www.kyungnampharm.com" title="경남제약 사이트 바로가기"><span class="hide">경남제약 로고</span></a></div>
+                        <div class="company-logo"><a href="http://www.kyungnampharm.com" title="경남제약 사이트 바로가기"><span
+                                    class="hide">경남제약 로고</span></a></div>
                         <p class="terms pc"><a href="javascript:popupWindow()">이용약관</a></p>
                         <p class="terms mo"><a href="javascript:openPopupDim('popup-terms');">이용약관</a></p>
                         <ul class="sns">
-                            <li><a href="https://www.youtube.com/user/lemona2014" title="유튜브 바로가기" target="_blank"><span class="hide">유튜브</span></a></li>
-                            <li><a href="https://www.instagram.com/lemona_official/" title="인스타그램 바로가기" target="_blank"><span class="hide">인스타그램</span></a></li>
-                            <li><a href="https://www.facebook.com/kyungnampharm" title="페이스북 바로가기" target="_blank"><span class="hide">페이스북</span></a></li>
+                            <li><a href="https://www.youtube.com/user/lemona2014" title="유튜브 바로가기" target="_blank"><span
+                                        class="hide">유튜브</span></a></li>
+                            <li><a href="https://www.instagram.com/lemona_official/" title="인스타그램 바로가기"
+                                    target="_blank"><span class="hide">인스타그램</span></a></li>
+                            <li><a href="https://www.facebook.com/kyungnampharm" title="페이스북 바로가기" target="_blank"><span
+                                        class="hide">페이스북</span></a></li>
                         </ul>
                     </div>
                     <div class="info pc">
                         <dl>
                             <dt>경남제약(주)</dt>
-                            <dd>국내영업 문의 02-3490-5142, 5143 | 해외영업 문의 : 02-3490-5160 | 광고문의 <a href="mailto:mkt123@knpharm.co.kr">mkt123@knpharm.co.kr</a></dd>
+                            <dd>국내영업 문의 02-3490-5142, 5143 | 해외영업 문의 : 02-3490-5160 | 광고문의 <a
+                                    href="mailto:mkt123@knpharm.co.kr">mkt123@knpharm.co.kr</a></dd>
                         </dl>
                         <p class="customer-center">소비자상담<br><span>080-232-8600</span></p>
                         <address>
                             <span>[서울] 서울시 강남구 언주로 702(논현동, 라이브플렉스타워) 6, 7, 8, 11층</span><br>
                             <span>[본사] 경상남도 의령군 의령읍 구룡로4남길 79</span>
                         </address>
-                        <select name="family-site" id="family-site" class="family-site" onchange="window.open(value, '_blank');">
+                        <select name="family-site" id="family-site" class="family-site"
+                            onchange="window.open(value, '_blank');">
                             <option value="">FAMILY SITE</option>
                             <option value="http://www.kyungnampharm.com">경남제약</option>
                             <option value="https://smartstore.naver.com/live-care">라이브케어</option>
@@ -942,14 +971,16 @@
                         <p class="customer-center">소비자상담<br><span>080-232-8600</span></p>
                         <dl>
                             <dt>경남제약(주)</dt>
-                            <dd>국내영업 문의 02-3490-5142, 5143<br>해외영업 문의 : 02-3490-5160 | 광고문의 <a href="mailto:mkt123@knpharm.co.kr">mkt123@knpharm.co.kr</a></dd>
+                            <dd>국내영업 문의 02-3490-5142, 5143<br>해외영업 문의 : 02-3490-5160 | 광고문의 <a
+                                    href="mailto:mkt123@knpharm.co.kr">mkt123@knpharm.co.kr</a></dd>
                         </dl>
-                        
+
                         <address>
                             <span>[서울] 서울시 강남구 언주로 702, 7층(논현동, 라이브플렉스타워)</span><br>
                             <span>[본사] 경상남도 의령군 의령읍 구룡로4남길 79</span>
                         </address>
-                        <select name="family-site" id="family-site" class="family-site pc" onchange="window.open(value, '_blank');">
+                        <select name="family-site" id="family-site" class="family-site pc"
+                            onchange="window.open(value, '_blank');">
                             <option value="">FAMILY SITE</option>
                             <option value="http://www.kyungnampharm.com">경남제약</option>
                             <option value="https://smartstore.naver.com/live-care">라이브케어</option>
@@ -967,7 +998,7 @@
     <div class="popup-products product1-pop1">
         <a href="javascript:closeProductsPopup('product1-pop1');" class="btn-close pc"></a>
         <div class="popup-product1-wrap">
-            
+
             <div class="flex-row pc">
                 <table>
                     <colgroup>
@@ -995,7 +1026,8 @@
                                 - 만 15세 이상 및 성인 : 1회 1정씩 1일 6회. (복용간격 2시간이상)<br>
                                 - 만 11세 이상~ 만 15세 미만 : 1회 1정씩 1일 4회. (복용간격 3시간이상)<br>
                                 - 만 8세 이상~ 만 11세 미만 : 1회 1정씩 1일 3회. (복용간격 4시간이상)
-                            </span></td>
+                            </span>
+                        </td>
                     </tr>
                 </table>
                 <table>
@@ -1008,7 +1040,8 @@
                             <th>DL-메틸에페드린염산염</th>
                             <td>기관지 확장 및 말초혈관 수축작용 (기침을 진정)<br>
                                 <span class="sub-txt">중추의 시그마 수용체에 작용하여 인후가 불편할 때<br>
-                                기침을 하는 것을 억제</span></td>
+                                    기침을 하는 것을 억제</span>
+                            </td>
                         </tr>
                         <tr>
                             <th>구아야콜설폰산칼륨</th>
@@ -1017,26 +1050,29 @@
                                     혈관수축을 통해 발적과 통증 완화<br>
                                     점액 분비운동력을 증가하고 객담 배출을 용이하게 하여<br>
                                     점막을 정상화하여 점막 보호막을 재건
-                                </span></td>
+                                </span>
+                            </td>
                         </tr>
                         <tr>
                             <th>노스카핀</th>
                             <td>진해작용을 통해 기침억제<br>
-                                <span class="sub-txt">인후가 마르고 상처가 생기는 것을 방지</span></td>
+                                <span class="sub-txt">인후가 마르고 상처가 생기는 것을 방지</span>
+                            </td>
                         </tr>
                         <tr>
                             <th><span class="small">세틸피리디늄염화물수화물</span></th>
                             <td>항 감염성 성분, 구강인두 세정<br>
-                            <span class="sub-txt">인지질의 구조와 비슷하여 세포막 통과 후 살균 및 소독작용</span></td>
+                                <span class="sub-txt">인지질의 구조와 비슷하여 세포막 통과 후 살균 및 소독작용</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-           <!-- 2023.04.28 파일 확장자 변경 zip -> pdf -->
-            <a href="../file/minol-ft.pdf" class="btn-file-down" >주의사항</a>
+            <!-- 2023.04.28 파일 확장자 변경 zip -> pdf -->
+            <a href="file/minol-ft.pdf" class="btn-file-down">주의사항</a>
         </div>
     </div>
-    
+
     <!-- 모바일 : 미놀제품 자세히보기 -->
     <div class="popup product1-mo-pop1">
         <div class="popup-product1-wrap">
@@ -1074,12 +1110,14 @@
                                     (복용간격 3시간이상)<br>
                                     - 만 8세 이상~ 만 11세 미만 : 1회 1정씩 1일 3회.<br>
                                     (복용간격 4시간이상)
-                                </span></td>
+                                </span>
+                            </td>
                         </tr>
                         <tr>
                             <th>DL-메틸에페드린<br>염산염</th>
                             <td>기관지 확장 및 말초혈관 수축작용 (기침을 진정)<br>
-                                <span class="sub-txt">중추의 시그마 수용체에 작용하여<br> 인후가 불편할 때 기침을 하는 것을 억제</span></td>
+                                <span class="sub-txt">중추의 시그마 수용체에 작용하여<br> 인후가 불편할 때 기침을 하는 것을 억제</span>
+                            </td>
                         </tr>
                         <tr>
                             <th>구아야콜설폰산<br>칼륨</th>
@@ -1088,23 +1126,26 @@
                                     혈관수축을 통해 발적과 통증 완화<br>
                                     점액 분비운동력을 증가하고 객담 배출을 용이하게 하여<br>
                                     점막을 정상화하여 점막 보호막을 재건
-                                </span></td>
+                                </span>
+                            </td>
                         </tr>
                         <tr>
                             <th>노스카핀</th>
                             <td>진해작용을 통해 기침억제<br>
-                                <span class="sub-txt">인후가 마르고 상처가 생기는 것을 방지</span></td>
+                                <span class="sub-txt">인후가 마르고 상처가 생기는 것을 방지</span>
+                            </td>
                         </tr>
                         <tr>
                             <th>세틸피리디늄<br>염화물수화물</th>
                             <td>항 감염성 성분, 구강인두 세정<br>
-                                <span class="sub-txt">인지질의 구조와 비슷하여 세포막 통과 후<br> 살균 및 소독작용</span></td>
+                                <span class="sub-txt">인지질의 구조와 비슷하여 세포막 통과 후<br> 살균 및 소독작용</span>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <!-- 2023.04.28 파일 확장자 변경 zip -> pdf -->
-            <a href="../file/minol-ft.pdf" class="btn-file-down" >주의사항</a>
+            <a href="file/minol-ft.pdf" class="btn-file-down">주의사항</a>
         </div>
     </div>
 
@@ -1157,7 +1198,8 @@
                 <dd><span>A.</span> 트로키제를 복용하면 빠르게 침의 분비를 증가시켜 인, 후에
                     <br>윤활작용을 합니다. 인후에 직접 작용해서 통증을 완화하는<br>
                     효과가 좋고 인후 전체를 감싸줍니다. 일반 기침약(시럽, 캡슐제)<br>
-                    대비 빠르게 작용합니다.</dd>
+                    대비 빠르게 작용합니다.
+                </dd>
             </dl>
             <table class="minol-table">
                 <colgroup>
@@ -1202,7 +1244,7 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1213,7 +1255,7 @@
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1231,7 +1273,7 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
                 <div class="product-recommand">
                     <dl>
@@ -1239,7 +1281,7 @@
                         <dd>소염진통제 단일 성분으로<br>
                             목의 염증 및 통증 완화</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-02.png" alt=""></div>
+                    <div><img src="img/img-product-find-02.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1250,7 +1292,7 @@
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
                 <div class="product-recommand">
@@ -1260,7 +1302,7 @@
                             목의 염증 및 통증 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-02.png" alt="">
+                        <img src="img/img-product-find-mo-02.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1278,7 +1320,7 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1289,7 +1331,7 @@
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1307,7 +1349,7 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
                 <div class="product-recommand">
                     <dl>
@@ -1315,7 +1357,7 @@
                         <dd>소염진통제 단일 성분으로<br>
                             목의 염증 및 통증 완화</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-02.png" alt=""></div>
+                    <div><img src="img/img-product-find-02.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1326,7 +1368,7 @@
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
                 <div class="product-recommand">
@@ -1336,7 +1378,7 @@
                             목의 염증 및 통증 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-02.png" alt="">
+                        <img src="img/img-product-find-mo-02.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1354,7 +1396,7 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
                 <div class="product-recommand">
                     <dl>
@@ -1362,7 +1404,7 @@
                         <dd>소염진통제 단일 성분으로<br>
                             목의 염증 및 통증 완화</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-02.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-02.png" alt=""></div>
                 </div>
                 <div class="product-recommand">
                     <dl>
@@ -1370,7 +1412,7 @@
                         <dd>가글로 빠르고 간편하게<br>
                             인후통 증상 완화</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-03.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-03.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1381,7 +1423,7 @@
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
                 <div class="product-recommand">
@@ -1391,17 +1433,17 @@
                             목의 염증 및 통증 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-02.png" alt="">
+                        <img src="img/img-product-find-mo-02.png" alt="">
                     </div>
                 </div>
                 <div class="product-recommand">
                     <dl>
                         <dt>이비나액</dt>
                         <dd>가글로 빠르고 간편하게<br>
-                        인후통 증상 완화</dd>
+                            인후통 증상 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-03.png" alt="">
+                        <img src="img/img-product-find-mo-03.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1419,18 +1461,18 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
                 <div class="product-recommand">
                     <dl>
                         <dt>미놀에프트로키</dt>
-                        <dd>진해거담제와 항균제 복합으로<br/>
+                        <dd>진해거담제와 항균제 복합으로<br />
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1447,7 +1489,7 @@
                         <dt>미놀노즈점비액</dt>
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
-                    <div><img src="../img/img-noise-find-01.png" alt=""></div>
+                    <div><img src="img/img-noise-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1457,7 +1499,7 @@
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-noise-find-mo-01.png" alt="">
+                        <img src="img/img-noise-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1474,7 +1516,7 @@
                         <dt>미놀노즈점비액</dt>
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
-                    <div><img src="../img/img-noise-find-01.png" alt=""></div>
+                    <div><img src="img/img-noise-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1484,7 +1526,7 @@
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-noise-find-mo-01.png" alt="">
+                        <img src="img/img-noise-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1501,7 +1543,7 @@
                         <dt>미놀노즈점비액</dt>
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
-                    <div><img src="../img/img-noise-find-01.png" alt=""></div>
+                    <div><img src="img/img-noise-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1511,7 +1553,7 @@
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-noise-find-mo-01.png" alt="">
+                        <img src="img/img-noise-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1528,7 +1570,7 @@
                         <dt>미놀노즈점비액</dt>
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
-                    <div><img src="../img/img-noise-find-01.png" alt=""></div>
+                    <div><img src="img/img-noise-find-01.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1538,7 +1580,7 @@
                         <dd>답답한 코! 시원하게!</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-noise-find-mo-01.png" alt="">
+                        <img src="img/img-noise-find-mo-01.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1556,18 +1598,18 @@
                         <dd>가글로 빠르고 간편하게<br>
                             인후통 증상 완화</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-03.png" alt=""></div>
-                </div>             
+                    <div class="product-img"><img src="img/img-product-find-03.png" alt=""></div>
+                </div>
             </div>
             <div class="dl-wrap mo">
                 <div class="product-recommand">
                     <dl>
                         <dt>이비나액</dt>
                         <dd>가글로 빠르고 간편하게<br>
-                        인후통 증상 완화</dd>
+                            인후통 증상 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-03.png" alt="">
+                        <img src="img/img-product-find-mo-03.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1585,7 +1627,7 @@
                         <dd>가글로 빠르고 간편하게<br>
                             인후통 증상 완화</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-03.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-03.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1593,10 +1635,10 @@
                     <dl>
                         <dt>이비나액</dt>
                         <dd>가글로 빠르고 간편하게<br>
-                        인후통 증상 완화</dd>
+                            인후통 증상 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-03.png" alt="">
+                        <img src="img/img-product-find-mo-03.png" alt="">
                     </div>
                 </div>
             </div>
@@ -1614,7 +1656,7 @@
                         <dd>진해거담제와 항균제 복합으로<br>
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-01.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-01.png" alt=""></div>
                 </div>
                 <div class="product-recommand">
                     <dl>
@@ -1622,7 +1664,7 @@
                         <dd>소염진통제 단일 성분으로<br>
                             목의 염증 및 통증 완화</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-02.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-02.png" alt=""></div>
                 </div>
                 <div class="product-recommand">
                     <dl>
@@ -1630,7 +1672,7 @@
                         <dd>가글로 빠르고 간편하게<br>
                             인후통 증상 완화</dd>
                     </dl>
-                    <div class="product-img"><img src="../img/img-product-find-03.png" alt=""></div>
+                    <div class="product-img"><img src="img/img-product-find-03.png" alt=""></div>
                 </div>
             </div>
             <div class="dl-wrap mo">
@@ -1641,7 +1683,7 @@
                             기침, 가래, 인후염을 한 번에</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-01.png" alt="">
+                        <img src="img/img-product-find-mo-01.png" alt="">
                     </div>
                 </div>
                 <div class="product-recommand">
@@ -1651,25 +1693,25 @@
                             목의 염증 및 통증 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-02.png" alt="">
+                        <img src="img/img-product-find-mo-02.png" alt="">
                     </div>
                 </div>
                 <div class="product-recommand">
                     <dl>
                         <dt>이비나액</dt>
                         <dd>가글로 빠르고 간편하게<br>
-                        인후통 증상 완화</dd>
+                            인후통 증상 완화</dd>
                     </dl>
                     <div>
-                        <img src="../img/img-product-find-mo-03.png" alt="">
+                        <img src="img/img-product-find-mo-03.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- 미놀 이외 제품 제품설명 및 Q&A 팝업 -->
-    
+
     <!-- 리놀 : PC -->
     <div class="popup-products product2-pop1">
         <a href="javascript:closeProductsPopup('product2-pop1');" class="btn-close pc"></a>
@@ -1696,14 +1738,14 @@
                     <tr>
                         <th>용법ㆍ용량</th>
                         <td>성인, 12세 이상 어린이 및 청소년 : 이 약 1개를 입안에서 서서히 녹여서 복용한다.<br>
-                            필요시 3~6시간 간격으로 1일 최대 5개 복용한다. 이 약은 최대 3일간 사용하도록 권장된다.<br> 
+                            필요시 3~6시간 간격으로 1일 최대 5개 복용한다. 이 약은 최대 3일간 사용하도록 권장된다.<br>
                             12세 미만 어린이는 복용하지 않는다.<br>
                             고령자 : 현재까지 사용경험이 제한적이므로 제시된 권장량은 없다.<br>
                             이 약은 국소 자극을 피하기 위해 입안에서 굴리면서 복용한다.</td>
                     </tr>
                 </tbody>
             </table>
-            <a href="../file/11.pdf" class="btn-file-down" target="_blank">주의사항</a>
+            <a href="file/11.pdf" class="btn-file-down" target="_blank">주의사항</a>
         </div>
     </div>
     <div class="popup-products product2-qna1">
@@ -1713,7 +1755,7 @@
             <h2>Q&amp;A</h2>
             <dl>
                 <dt><span>Q.</span> 미놀에프트로키와는 어떤 점이 다른가요?</dt>
-                <dd><span>A.</span> 리놀에스트로키는 비스테로이드성 소염 진통제입니다. 플루르비프로펜 성분이 진통 소염 효과를 가지고 있으며,<br> 
+                <dd><span>A.</span> 리놀에스트로키는 비스테로이드성 소염 진통제입니다. 플루르비프로펜 성분이 진통 소염 효과를 가지고 있으며,<br>
                     목 통증이 심할 때 효과가 있습니다. 미놀에프트로키는 초기 목감기, 인후염, 가래, 기침 등에 효과가 있으며,<br>
                     진통제 성분이 없어 8세 이상이면 누구나 안전하게 복용할 수 있습니다.</dd>
             </dl>
@@ -1745,14 +1787,14 @@
                     <tr>
                         <th>용법ㆍ용량</th>
                         <td>성인, 12세 이상 어린이 및 청소년 :<br> 이 약 1개를 입안에서 서서히 녹여서 복용한다.<br>
-                            필요시 3~6시간 간격으로 1일 최대 5개 복용한다.<br> 이 약은 최대 3일간 사용하도록 권장된다.<br> 
+                            필요시 3~6시간 간격으로 1일 최대 5개 복용한다.<br> 이 약은 최대 3일간 사용하도록 권장된다.<br>
                             12세 미만 어린이는 복용하지 않는다.<br>
                             고령자 : 현재까지 사용경험이 제한적이므로 제시된<br> 권장량은 없다.<br>
                             이 약은 국소 자극을 피하기 위해 입안에서<br> 굴리면서 복용한다.</td>
                     </tr>
                 </tbody>
             </table>
-            <a href="../file/11.pdf" class="btn-file-down" target="_blank">주의사항</a>
+            <a href="file/11.pdf" class="btn-file-down" target="_blank">주의사항</a>
         </div>
     </div>
     <div class="popup product2-mo-qna1">
@@ -1763,7 +1805,7 @@
             <dl>
                 <dt><span>Q.</span> 미놀에프트로키와는 어떤 점이 다른가요?</dt>
                 <dd><span>A.</span> 리놀에스트로키는 비스테로이드성 소염 진통제입니다.<br>
-                    플루르비프로펜 성분이 진통 소염 효과를 가지고 있으며, 목 통증이<br> 
+                    플루르비프로펜 성분이 진통 소염 효과를 가지고 있으며, 목 통증이<br>
                     심할 때 효과가 있습니다. 미놀에프트로키는 초기 목감기, 인후염, 가래,<br>
                     기침 등에 효과가 있으며, 진통제 성분이 없어 8세 이상이면 누구나<br>
                     안전하게 복용할 수 있습니다.</dd>
@@ -1801,7 +1843,7 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="../file/9.pdf" class="btn-file-down" target="_blank">주의사항</a>
+            <a href="file/9.pdf" class="btn-file-down" target="_blank">주의사항</a>
         </div>
     </div>
     <div class="popup-products product2-qna2">
@@ -1819,7 +1861,8 @@
             </dl>
             <dl>
                 <dt><span>Q.</span> 코가 자주 막혀서 증상이 심한데, 자주 뿌려도 괜찮을까요?</dt>
-                <dd><span>A.</span> 과량 투여 시 용액이 삼켜져서 위장관 흡수에 의해 어지러움, 불면증, 호홉곤란등의 전신작용이 나타날 수 있으니 용법 용량 대로 사용을 권장합니다.</dd>
+                <dd><span>A.</span> 과량 투여 시 용액이 삼켜져서 위장관 흡수에 의해 어지러움, 불면증, 호홉곤란등의 전신작용이 나타날 수 있으니 용법 용량 대로 사용을 권장합니다.
+                </dd>
             </dl>
             <dl>
                 <dt><span>Q.</span> 사용하기 전 흔들어 사용해야 하나요?</dt>
@@ -1857,7 +1900,7 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="../file/9.pdf" class="btn-file-down" target="_blank">주의사항</a>
+            <a href="file/9.pdf" class="btn-file-down" target="_blank">주의사항</a>
         </div>
     </div>
     <div class="popup product2-mo-qna2">
@@ -1875,7 +1918,8 @@
             </dl>
             <dl>
                 <dt><span>Q.</span> 코가 자주 막혀서 증상이 심한데, 자주 뿌려도 괜찮을까요?</dt>
-                <dd><span>A.</span> 과량 투여 시 용액이 삼켜져서 위장관 흡수에 의해 어지러움,<br> 불면증, 호홉곤란등의 전신작용이 나타날 수 있으니 용법<br> 용량 대로 사용을 권장합니다.</dd>
+                <dd><span>A.</span> 과량 투여 시 용액이 삼켜져서 위장관 흡수에 의해 어지러움,<br> 불면증, 호홉곤란등의 전신작용이 나타날 수 있으니 용법<br> 용량 대로 사용을
+                    권장합니다.</dd>
             </dl>
             <dl>
                 <dt><span>Q.</span> 사용하기 전 흔들어 사용해야 하나요?</dt>
@@ -1915,7 +1959,7 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="../file/10.pdf" class="btn-file-down" target="_blank">주의사항</a>
+            <a href="file/10.pdf" class="btn-file-down" target="_blank">주의사항</a>
         </div>
     </div>
     <div class="popup-products product2-qna3">
@@ -1976,7 +2020,7 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="../file/10.pdf" class="btn-file-down" target="_blank">주의사항</a>
+            <a href="file/10.pdf" class="btn-file-down" target="_blank">주의사항</a>
         </div>
     </div>
     <div class="popup product2-mo-qna3">
@@ -2091,20 +2135,28 @@
     </div>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function (ev) {
+            const { innerHeight } = window;
+            document.documentElement.style.setProperty("--app-height", `${innerHeight}px`);
+        });
+    </script>
     <script>
         const box = document.querySelectorAll('.video-wrap>div>div');
-            for (let el of box) {
-                el.addEventListener('mouseover', e => {
-                    e.currentTarget.classList.add('on');
-                    e.currentTarget.children[2].muted = true;
-                    e.currentTarget.children[2].play();
-                });
-                el.addEventListener('mouseout', e => {
-                    e.currentTarget.children[2].pause();
-                    e.currentTarget.children[2].currentTime = 0;
-                    e.currentTarget.classList.remove('on');
-                });
-            }
+        for (let el of box) {
+            el.addEventListener('mouseover', e => {
+                e.currentTarget.classList.add('on');
+                e.currentTarget.children[2].muted = true;
+                e.currentTarget.children[2].play();
+            });
+            el.addEventListener('mouseout', e => {
+                e.currentTarget.children[2].pause();
+                e.currentTarget.children[2].currentTime = 0;
+                e.currentTarget.classList.remove('on');
+            });
+        }
     </script>
 </body>
+
 </html>
