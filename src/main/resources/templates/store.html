@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,9 @@
     <script src="/js/pharmacy.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.css" />
     <link rel="stylesheet" type="text/css" href="/css/minol.css">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+    <title>미놀 - 간편하고 효과 빠른!</title>
 
     <th:block th:if="${@environment.getProperty('spring.config.activate.on-profile') == 'local'}">
         <script th:inline="javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=l2o6xz5abj&submodules=geocoder"></script>
@@ -21,7 +25,7 @@
     </th:block>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
-    <title>미놀 - 간편하고 효과 빠른!</title>
+
 </head>
 <body>
 <div class="dim"></div>
