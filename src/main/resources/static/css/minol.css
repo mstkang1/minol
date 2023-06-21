@@ -130,37 +130,6 @@ nav {
     height: 100%;
 }
 
-.slide01 {
-    background: url(../img/banner1.jpg);
-    background-size: cover;
-}
-
-.slide02 {
-    background: url(../img/banner2.jpg);
-    background-size: cover;
-}
-
-.slide03 {
-    background: url(../img/banner3.png);
-    background-size: cover;
-
-}
-
-.slide04 {
-    background: url(../img/mo-banner1.jpg);
-    background-size: 100% 100%;
-}
-
-.slide05 {
-    background: url(../img/mo-banner2.jpg);
-    background-size: 100% 100%;
-}
-
-.slide06 {
-    background: url(../img/mo-banner3.png);
-    background-size: 100% 100%;
-}
-
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -6117,6 +6086,7 @@ footer.fix {
     
     .layer-popup .popup-wrap {
         padding: 12px;
+        
     
     }
     

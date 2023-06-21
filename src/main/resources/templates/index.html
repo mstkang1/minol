@@ -104,9 +104,16 @@
         <div class="main-banner-wrap">
             <div class="swiper main-banner pc">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slide01"></div>
-                    <div class="swiper-slide slide02"></div>
-                    <div class="swiper-slide slide03"></div>
+                    <div class="swiper-slide"  th:each="banner : ${bannerList}">
+                        <th:block th:if="${not #strings.isEmpty(banner.bannerPcUrl)}">
+                            <a th:href="@{{pcUrl}(pcUrl=${banner.bannerPcUrl})}" th:target="${banner.bannerPcIsNew} ? '_blank' : ''">
+                        </th:block>
+                        <img th:src="@{/banner/download/P/{bannerSeq}(bannerSeq=${banner.bannerSeq})}" alt="">
+                        <!--<img src="/img/banner1.jpg" alt="">-->
+                        <th:block th:if="${not #strings.isEmpty(banner.bannerPcUrl)}">
+                            </a>
+                        </th:block>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -115,10 +122,16 @@
 
             <div class="swiper main-banner-mo mo">
                 <div class="swiper-wrapper">
-
-                    <div class="swiper-slide slide04"></div>
-                    <div class="swiper-slide slide05"></div>
-                    <div class="swiper-slide slide06"></div>
+                    <div class="swiper-slide"  th:each="banner : ${bannerList}">
+                        <th:block th:if="${not #strings.isEmpty(banner.bannerMoUrl)}">
+                            <a th:href="@{{pcUrl}(pcUrl=${banner.bannerMoUrl})}" th:target="${banner.bannerMoIsNew} ? '_blank' : ''">
+                        </th:block>
+                        <img th:src="@{/banner/download/M/{bannerSeq}(bannerSeq=${banner.bannerSeq})}" alt="">
+                        <!--<img src="/img/banner1.jpg" alt="">-->
+                        <th:block th:if="${not #strings.isEmpty(banner.bannerMoUrl)}">
+                            </a>
+                        </th:block>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
