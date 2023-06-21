@@ -377,7 +377,7 @@
         }
 
         function getStoreLsit() {
-            //mapInit();
+            mapInit();
             //모든 값이 있을 경우에만 약국정보를 가져옴.
             if($("#latitude").val() != "" && $("#longitude").val() != "" && $("#distance").val() != "" && $('#brand').val() !== "" && $('#product').val() != ""){
                 var obj = {"latitude": $("#latitude").val(), "longitude": $("#longitude").val(), "distance" : $("#distance").val(), "brandCode" : $('#brand').val(), 'productName' : $('#product').val()};
