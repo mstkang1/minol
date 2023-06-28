@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://minol.co.kr/sitemap.xml
