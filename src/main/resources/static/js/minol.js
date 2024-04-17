@@ -12,6 +12,7 @@ $(function () {
       "extra1",
       "extra2",
       "extra3",
+      "extra4",
       "footer",
     ],
     menu: "#headerMenu",

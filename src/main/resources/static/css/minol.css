@@ -5,7 +5,7 @@
     display: none !important;
 }
 
-/* PC모드에서는 mo 클래스를 모두 보여주지 않음 */
+/* PCÃ«ÂªÂ¨Ã«â€œÅ“Ã¬â€”ÂÃ¬â€žÅ“Ã«Å â€ mo Ã­ÂÂ´Ã«Å¾ËœÃ¬Å Â¤Ã«Â¥Â¼ Ã«ÂªÂ¨Ã«â€˜Â Ã«Â³Â´Ã¬â€”Â¬Ã¬Â£Â¼Ã¬Â§â‚¬ Ã¬â€¢Å Ã¬ÂÅ’ */
 
 .mt10 {
     margin-top: 10px;
@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-/* 상단메뉴 */
+/* Ã¬Æ’ÂÃ«â€¹Â¨Ã«Â©â€Ã«â€°Â´ */
 header {
     display: flex;
     justify-content: space-around;
@@ -114,7 +114,7 @@ nav {
     color: #fff;
 }
 
-/* 메인배너 */
+/* Ã«Â©â€Ã¬ÂÂ¸Ã«Â°Â°Ã«â€žË† */
 .main-banner-wrap {
     position: relative;
     width: 100vw;
@@ -142,7 +142,7 @@ nav {
     height: 100vh;
 }
 
-/* 2023-04-29 : 메인배너 play/pause버튼 위치수정 */
+/* 2023-04-29 : Ã«Â©â€Ã¬ÂÂ¸Ã«Â°Â°Ã«â€žË† play/pauseÃ«Â²â€žÃ­Å Â¼ Ã¬Å“â€žÃ¬Â¹ËœÃ¬Ë†ËœÃ¬Â â€¢ */
 .btn-playpause-wrap {
     position: absolute;
     width: 24px;
@@ -171,7 +171,7 @@ nav {
     background: url('../img/btn-playpause.png') no-repeat center -24px;
 }
 
-/* 2023-04-29 : 메인배너 pagination 위치수정 */
+/* 2023-04-29 : Ã«Â©â€Ã¬ÂÂ¸Ã«Â°Â°Ã«â€žË† pagination Ã¬Å“â€žÃ¬Â¹ËœÃ¬Ë†ËœÃ¬Â â€¢ */
 .main-banner .swiper-pagination {
     position: absolute;
     left: calc(50% - 600px);
@@ -292,7 +292,7 @@ nav {
     }
 }
 
-/* 미놀의 역사 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬Ã¬ÂËœ Ã¬â€”Â­Ã¬â€šÂ¬ */
 .history-wrap {
     position: relative;
     width: 1200px;
@@ -433,7 +433,7 @@ nav {
 }
 
 
-/* 모든 미놀 제품 알아보기 */
+/* Ã«ÂªÂ¨Ã«â€œÂ  Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† Ã¬â€¢Å’Ã¬â€¢â€žÃ«Â³Â´ÃªÂ¸Â° */
 .product-banner-wrap {
     position: relative;
     width: 100%;
@@ -566,7 +566,7 @@ nav {
     display: none;
 }
 
-/* 활성화 된 미놀맛별 텍스트 색상 */
+/* Ã­â„¢Å“Ã¬â€žÂ±Ã­â„¢â€ Ã«ÂÅ“ Ã«Â¯Â¸Ã«â€ â‚¬Ã«Â§â€ºÃ«Â³â€ž Ã­â€¦ÂÃ¬Å Â¤Ã­Å Â¸ Ã¬Æ’â€°Ã¬Æ’Â */
 .product-banner .swiper-slide-active p.taste {
     display: flex;
     justify-content: center;
@@ -591,6 +591,16 @@ nav {
 .product-banner .product3.swiper-slide-active p.taste {
     display: flex;
     color: #ef889f;
+}
+
+.product-banner .product8.swiper-slide-active p.taste {
+    display: flex;
+    color: #ef889f;
+}
+
+.product-banner .product4.swiper-slide-active p.taste {
+    display: flex;
+    color: #e4443b;
 }
 
 .product-banner .swiper-slide-active p.product {
@@ -632,6 +642,10 @@ nav {
     background: #ef889f;
 }
 
+.product-banner .product8.swiper-slide-active {
+    background: #ff8a7a;
+}
+
 .product-banner .product4.swiper-slide-active {
     background: #e4443b;
 }
@@ -642,6 +656,10 @@ nav {
 
 .product-banner .product6.swiper-slide-active {
     background: #57c4df;
+}
+
+.product-banner .product7.swiper-slide-active {
+    background: #0033cc;
 }
 
 .product-banner .product-button-prev, .product-banner .product-button-next {
@@ -667,7 +685,7 @@ nav {
 }
 
 
-/* 미놀 제품 - 목 아플 때 효과 빠른 미놀 에프트로키 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† - Ã«ÂªÂ© Ã¬â€¢â€žÃ­â€Å’ Ã«â€¢Å’ Ã­Å¡Â¨ÃªÂ³Â¼ Ã«Â¹Â Ã«Â¥Â¸ Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬â€”ÂÃ­â€â€žÃ­Å Â¸Ã«Â¡Å“Ã­â€šÂ¤ */
 .product1-wrap {
     position: relative;
     width: 100vw;
@@ -732,7 +750,7 @@ nav {
     overflow: hidden;
 }
 
-/* 자세히보기, Q&A버튼 */
+/* Ã¬Å¾ÂÃ¬â€žÂ¸Ã­Å¾Ë†Ã«Â³Â´ÃªÂ¸Â°, Q&AÃ«Â²â€žÃ­Å Â¼ */
 .minol-wrap>ul {
     width: 100%;
     display: flex;
@@ -769,7 +787,7 @@ nav {
     padding-top: 40px;
 }
 
-/* 미놀 애니메이션 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬â€¢Â Ã«â€¹Ë†Ã«Â©â€Ã¬ÂÂ´Ã¬â€¦Ëœ */
 .product1-wrap>ul>li:nth-of-type(1) {
     position: relative;
     background: #ffa417;
@@ -1048,7 +1066,7 @@ nav {
 }
 
 
-/* 나에게 딱 필요한 미놀 제품 찾기 */
+/* Ã«â€šËœÃ¬â€”ÂÃªÂ²Å’ Ã«â€Â± Ã­â€¢â€žÃ¬Å¡â€Ã­â€¢Å“ Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† Ã¬Â°Â¾ÃªÂ¸Â° */
 .product-find-wrap {
     position: relative;
     width: 100%;
@@ -1155,7 +1173,7 @@ nav {
     pointer-events: auto;
 }
 
-/* 목 */
+/* Ã«ÂªÂ© */
 .product-find .neck .button {
     position: relative;
     display: flex;
@@ -1219,7 +1237,7 @@ nav {
     justify-content: center;
 }
 
-/* 코 */
+/* Ã¬Â½â€ */
 .product-find .noise .button {
     position: relative;
     display: flex;
@@ -1282,7 +1300,7 @@ nav {
     justify-content: center;
 }
 
-/* 입 */
+/* Ã¬Å¾â€¦ */
 .product-find .mouse-care .button {
     position: relative;
     display: flex;
@@ -1345,7 +1363,7 @@ nav {
     justify-content: center;
 }
 
-/* 제품찾기 결과 */
+/* Ã¬Â Å“Ã­â€™Ë†Ã¬Â°Â¾ÃªÂ¸Â° ÃªÂ²Â°ÃªÂ³Â¼ */
 .popup .title-btn {
     display: block;
     width: 200px;
@@ -1427,7 +1445,7 @@ nav {
 }
 
 
-/* 미놀 제품 - 자세히 보기 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† - Ã¬Å¾ÂÃ¬â€žÂ¸Ã­Å¾Ë† Ã«Â³Â´ÃªÂ¸Â° */
 .popup-products .popup-product1-wrap {
     position: fixed;
     top: 50%;
@@ -1517,7 +1535,7 @@ nav {
     padding-left: 38px;
 }
 
-/* 미놀 외 제품 소개 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬â„¢Â¸ Ã¬Â Å“Ã­â€™Ë† Ã¬â€ Å’ÃªÂ°Å“ */
 .popup-products .popup-product2-wrap {
     position: relative;
     padding: 50px 60px 0 60px;
@@ -1576,7 +1594,7 @@ nav {
 }
 
 
-/* 미놀 제품 Q&A */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† Q&A */
 
 .popup-product-qna-wrap {
     padding: 60px 100px 0 100px;
@@ -1654,7 +1672,7 @@ nav {
 }
 
 
-/* 미놀 이외 제품 Q&A */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬ÂÂ´Ã¬â„¢Â¸ Ã¬Â Å“Ã­â€™Ë† Q&A */
 .popup-products .popup-product2-qna-wrap {
     padding: 60px 100px 0 100px;
 }
@@ -1698,7 +1716,7 @@ nav {
     color: #262626;
 }
 
-/* 팝업 */
+/* Ã­Å’ÂÃ¬â€”â€¦ */
 .popup {
     display: none;
     position: fixed;
@@ -1716,8 +1734,8 @@ nav {
 
 .popup a.btn-close {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 200px;
+    right: 290px;
     display: block;
     width: 28px;
     height: 28px;
@@ -1801,7 +1819,7 @@ a.btn-file-down {
 
 
 
-/* 제품 편의성 강조페이지 */
+/* Ã¬Â Å“Ã­â€™Ë† Ã­Å½Â¸Ã¬ÂËœÃ¬â€žÂ± ÃªÂ°â€¢Ã¬Â¡Â°Ã­Å½ËœÃ¬ÂÂ´Ã¬Â§â‚¬ */
 .convenience-wrap {
     position: relative;
     width: 100%;
@@ -1965,7 +1983,7 @@ a.btn-file-down {
     background: url('../img/bg-minol.png') no-repeat 0 0;
 }
 
-영상 .video-wrap {
+Ã¬ËœÂÃ¬Æ’Â .video-wrap {
     position: relative;
     width: 100%;
     height: 100%;
@@ -2100,7 +2118,7 @@ a.btn-file-down {
     transform: skewX(5deg) translate(-50%)
 }
 
-/* 약국찾기 */
+/* Ã¬â€¢Â½ÃªÂµÂ­Ã¬Â°Â¾ÃªÂ¸Â° */
 .pharmacy-wrap {
     width: 100%;
     padding-top: 200px;
@@ -2164,7 +2182,7 @@ a.btn-file-down {
     background: url('../img/bg-selectbox-arrow.png') no-repeat 165px 18px;
 }
 
-/* 셀렉트 박스 가운데 정렬 */
+/* Ã¬â€¦â‚¬Ã«Â â€°Ã­Å Â¸ Ã«Â°â€¢Ã¬Å Â¤ ÃªÂ°â‚¬Ã¬Å¡Â´Ã«ÂÂ° Ã¬Â â€¢Ã«Â Â¬ */
 select {
     text-align: center;
     text-align-last: center;
@@ -2264,7 +2282,7 @@ select {
 
 
 
-/* 미놀 이외 제품 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬ÂÂ´Ã¬â„¢Â¸ Ã¬Â Å“Ã­â€™Ë† */
 .product2-wrap {
     width: 100%;
     background: #f2f9fd;
@@ -2288,7 +2306,7 @@ select {
 }
 
 
-/* 미놀노즈 점비액 툴팁 */
+/* Ã«Â¯Â¸Ã«â€ â‚¬Ã«â€¦Â¸Ã¬Â¦Ë† Ã¬Â ÂÃ«Â¹â€žÃ¬â€¢Â¡ Ã­Ë†Â´Ã­Å’Â */
 .tooltip-area1 {
     position: relative;
 }
@@ -2338,8 +2356,8 @@ select {
 
 .tooltip-area1 p.title3 {
     position: absolute;
-    top: 395px;
-    left: 46px;
+    top: 381px;
+    left: 36px;
     z-index: 20;
 }
 
@@ -2548,7 +2566,7 @@ select {
 }
 
 
-/* 이비나액 */
+/* Ã¬ÂÂ´Ã«Â¹â€žÃ«â€šËœÃ¬â€¢Â¡ */
 .tooltip-area.port2 {
     position: relative;
 }
@@ -2787,9 +2805,9 @@ footer.fix {
     color: #949494;
 }
 
-/* ========= 모바일 css =========== */
+/* ========= Ã«ÂªÂ¨Ã«Â°â€Ã¬ÂÂ¼ css =========== */
 
-/* 타블렛 */
+/* Ã­Æ’â‚¬Ã«Â¸â€Ã«Â â€º */
 /* @media screen and (max-width:1024px) {
     
     
@@ -2823,18 +2841,18 @@ footer.fix {
     }
 }
 
-/* 스마트폰 세로 */
+/* Ã¬Å Â¤Ã«Â§Ë†Ã­Å Â¸Ã­ÂÂ° Ã¬â€žÂ¸Ã«Â¡Å“ */
 @media screen and (max-width:576px) {
     .pc {
         display: none !important;
     }
 
-    /* 모바일에서 pc 클래스는 보이지 않게 함 */
+    /* Ã«ÂªÂ¨Ã«Â°â€Ã¬ÂÂ¼Ã¬â€”ÂÃ¬â€žÅ“ pc Ã­ÂÂ´Ã«Å¾ËœÃ¬Å Â¤Ã«Å â€ Ã«Â³Â´Ã¬ÂÂ´Ã¬Â§â‚¬ Ã¬â€¢Å ÃªÂ²Å’ Ã­â€¢Â¨ */
     .mo {
         display: block !important;
     }
 
-    /* 모바일에서 mo 클래스 보이게 함 */
+    /* Ã«ÂªÂ¨Ã«Â°â€Ã¬ÂÂ¼Ã¬â€”ÂÃ¬â€žÅ“ mo Ã­ÂÂ´Ã«Å¾ËœÃ¬Å Â¤ Ã«Â³Â´Ã¬ÂÂ´ÃªÂ²Å’ Ã­â€¢Â¨ */
 
     body {
         position: relative;
@@ -2968,7 +2986,7 @@ footer.fix {
         padding: 0;
     }
 
-    /* 메인배너 */
+    /* Ã«Â©â€Ã¬ÂÂ¸Ã«Â°Â°Ã«â€žË† */
     .main-banner-wrap {
         position: relative;
         width: 100vw;
@@ -2996,7 +3014,7 @@ footer.fix {
         transform: translate(0);
     }
 
-    /* 배너 재생, 멈춤 버튼 */
+    /* Ã«Â°Â°Ã«â€žË† Ã¬Å¾Â¬Ã¬Æ’Â, Ã«Â©Ë†Ã¬Â¶Â¤ Ã«Â²â€žÃ­Å Â¼ */
     .btn-playpause-mo {
         position: relative;
         height: 24px;
@@ -3079,7 +3097,7 @@ footer.fix {
         color: #fff;
     }
 
-    /* 미놀의 역사 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬Ã¬ÂËœ Ã¬â€”Â­Ã¬â€šÂ¬ */
     .history-wrap {
         position: relative;
         width: 100%;
@@ -3149,7 +3167,7 @@ footer.fix {
         transform: scale(1);
     }
 
-    /* 모든 미놀 제품 알아보기 */
+    /* Ã«ÂªÂ¨Ã«â€œÂ  Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† Ã¬â€¢Å’Ã¬â€¢â€žÃ«Â³Â´ÃªÂ¸Â° */
     .product-banner-wrap {
         position: relative;
         width: 100%;
@@ -3278,7 +3296,7 @@ footer.fix {
         border-radius: 50px;
     }
 
-    /* 활성화 된 미놀맛별 텍스트 색상 */
+    /* Ã­â„¢Å“Ã¬â€žÂ±Ã­â„¢â€ Ã«ÂÅ“ Ã«Â¯Â¸Ã«â€ â‚¬Ã«Â§â€ºÃ«Â³â€ž Ã­â€¦ÂÃ¬Å Â¤Ã­Å Â¸ Ã¬Æ’â€°Ã¬Æ’Â */
     .product-banner2 .swiper-slide-active p.taste {
         display: flex;
         justify-content: center;
@@ -3305,6 +3323,16 @@ footer.fix {
         color: #ef889f;
     }
 
+    .product-banner2 .product8.swiper-slide p.taste {
+        display: flex;
+        color: #ff8a7a;
+    }
+
+    .product-banner2 .product4.swiper-slide p.taste {
+        display: flex;
+        color: #e4443b;
+    }
+
     .product-banner2 .product1.swiper-slide p.desc {
         color: #00a1dd;
     }
@@ -3317,6 +3345,10 @@ footer.fix {
         color: #ef889f;
     }
 
+    .product-banner2 .product8.swiper-slide p.desc {
+        color: #ff8a7a;
+    }
+
     .product-banner2 .product4.swiper-slide p.desc {
         color: #e4443b;
     }
@@ -3327,6 +3359,10 @@ footer.fix {
 
     .product-banner2 .product6.swiper-slide p.desc {
         color: #57c4df;
+    }
+
+    .product-banner2 .product7.swiper-slide p.desc {
+        color: #0033cc;
     }
 
     .product-banner2 .swiper-slide p.desc {
@@ -3364,6 +3400,10 @@ footer.fix {
         background: #ef889f;
     }
 
+    .product-banner2 .product8.swiper-slide-active .text-circle {
+        background: #ff8a7a;
+    }
+
     .product-banner2 .product4.swiper-slide-active .text-circle {
         background: #e4443b;
     }
@@ -3374,6 +3414,10 @@ footer.fix {
 
     .product-banner2 .product6.swiper-slide-active .text-circle {
         background: #57c4df;
+    }
+
+    .product-banner2 .product7.swiper-slide-active .text-circle {
+        background: #0033cc;
     }
 
     .product-button-prev {
@@ -3423,7 +3467,7 @@ footer.fix {
         margin-top: 25px;
     }
 
-    /* product1 - 목 아플 때 효과 빠른 미놀 에프트로키 */
+    /* product1 - Ã«ÂªÂ© Ã¬â€¢â€žÃ­â€Å’ Ã«â€¢Å’ Ã­Å¡Â¨ÃªÂ³Â¼ Ã«Â¹Â Ã«Â¥Â¸ Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬â€”ÂÃ­â€â€žÃ­Å Â¸Ã«Â¡Å“Ã­â€šÂ¤ */
     .product1-wrap {
         position: relative;
         width: 100vw;
@@ -3516,7 +3560,7 @@ footer.fix {
         color: #fff;
     }
 
-    /* 미놀 애니메이션 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬â€¢Â Ã«â€¹Ë†Ã«Â©â€Ã¬ÂÂ´Ã¬â€¦Ëœ */
     .product1-wrap>ul>li:nth-of-type(1) {
         position: relative;
         background: #ffa417;
@@ -3800,7 +3844,7 @@ footer.fix {
     }
 
 
-    /* 미놀 제품 - 자세히 보기 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† - Ã¬Å¾ÂÃ¬â€žÂ¸Ã­Å¾Ë† Ã«Â³Â´ÃªÂ¸Â° */
     .popup-products .popup-product1-wrap {
         position: fixed;
         top: 50%;
@@ -3893,7 +3937,7 @@ footer.fix {
 
 
 
-    /* 나에게 딱 필요한 미놀 제품 찾기 */
+    /* Ã«â€šËœÃ¬â€”ÂÃªÂ²Å’ Ã«â€Â± Ã­â€¢â€žÃ¬Å¡â€Ã­â€¢Å“ Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† Ã¬Â°Â¾ÃªÂ¸Â° */
     .product-find-wrap {
         position: relative;
         margin: 0 auto;
@@ -4072,7 +4116,7 @@ footer.fix {
         padding: 0 50px;
     }
 
-    /* 제품찾기 */
+    /* Ã¬Â Å“Ã­â€™Ë†Ã¬Â°Â¾ÃªÂ¸Â° */
     .neck-mo-wrap, .noise-mo-wrap, .mouse-mo-wrap {
         display: none;
         position: absolute;
@@ -4083,7 +4127,7 @@ footer.fix {
         z-index: 2;
     }
 
-    /* 목 */
+    /* Ã«ÂªÂ© */
     .neck-mo-wrap .neck {
         display: flex;
         position: absolute;
@@ -4159,7 +4203,7 @@ footer.fix {
         background: url('../img/btn-back-mo-arrow.png') no-repeat 0 0;
     }
 
-    /* 코 */
+    /* Ã¬Â½â€ */
     .noise-mo-wrap .noise {
         display: flex;
         position: absolute;
@@ -4235,7 +4279,7 @@ footer.fix {
         background: url('../img/btn-back-mo-arrow.png') no-repeat 0 0;
     }
 
-    /* 입 */
+    /* Ã¬Å¾â€¦ */
     .mouse-mo-wrap .mouse-care {
         display: flex;
         position: absolute;
@@ -4312,7 +4356,7 @@ footer.fix {
         background: url('../img/btn-back-mo-arrow.png') no-repeat 0 0;
     }
 
-    /* 제품찾기 결과 */
+    /* Ã¬Â Å“Ã­â€™Ë†Ã¬Â°Â¾ÃªÂ¸Â° ÃªÂ²Â°ÃªÂ³Â¼ */
     .popup {
         width: 100%;
     }
@@ -4337,7 +4381,7 @@ footer.fix {
         height: 100%;
     }
 
-    /* 부위별 상세페이지 */
+    /* Ã«Â¶â‚¬Ã¬Å“â€žÃ«Â³â€ž Ã¬Æ’ÂÃ¬â€žÂ¸Ã­Å½ËœÃ¬ÂÂ´Ã¬Â§â‚¬ */
     .product-find .detail-1 {
         display: none;
     }
@@ -4350,7 +4394,7 @@ footer.fix {
         display: none;
     }
 
-    /* 제품 편의성 강조페이지 */
+    /* Ã¬Â Å“Ã­â€™Ë† Ã­Å½Â¸Ã¬ÂËœÃ¬â€žÂ± ÃªÂ°â€¢Ã¬Â¡Â°Ã­Å½ËœÃ¬ÂÂ´Ã¬Â§â‚¬ */
     .convenience-wrap {
         position: relative;
         width: 100%;
@@ -4562,7 +4606,7 @@ footer.fix {
         background: url('../img/bg-minol-mo.png') no-repeat 0 0;
     }
 
-    /* 영상 */
+    /* Ã¬ËœÂÃ¬Æ’Â */
     .video-wrap {
         position: relative;
         width: 100%;
@@ -4708,7 +4752,7 @@ footer.fix {
     }
 
 
-    /* 미놀 외 제품 소개 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬â„¢Â¸ Ã¬Â Å“Ã­â€™Ë† Ã¬â€ Å’ÃªÂ°Å“ */
     .popup .popup-product2-wrap {
         position: fixed;
         top: 50%;
@@ -4746,7 +4790,7 @@ footer.fix {
         padding-left: 7px;
     }
 
-    /* 미놀 이외의 제품 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬ÂÂ´Ã¬â„¢Â¸Ã¬ÂËœ Ã¬Â Å“Ã­â€™Ë† */
     .product2-wrap .product2 {
         position: relative;
         width: 100%;
@@ -4839,7 +4883,7 @@ footer.fix {
         position: relative;
     }
 
-    /* 미놀노즈 점비액 툴팁 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬Ã«â€¦Â¸Ã¬Â¦Ë† Ã¬Â ÂÃ«Â¹â€žÃ¬â€¢Â¡ Ã­Ë†Â´Ã­Å’Â */
     .tooltip-area1 {
         position: relative;
     }
@@ -4876,7 +4920,7 @@ footer.fix {
     .tooltip-area1 div.desc1 {
         position: absolute;
         overflow: hidden;
-        top: 20%;
+        top: -9%;
         left: 20%;
         width: 30px;
         height: 30px;
@@ -4890,7 +4934,7 @@ footer.fix {
         position: absolute;
         overflow: hidden;
         top: 50%;
-        left: 65%;
+        left: 89%;
         width: 30px;
         height: 30px;
         background: rgba(48, 159, 216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0;
@@ -4903,7 +4947,7 @@ footer.fix {
         position: absolute;
         overflow: hidden;
         top: 70%;
-        left: 20%;
+        left: -18%;
         width: 30px;
         height: 30px;
         background: rgba(48, 159, 216, 0.8) url('../img/btn-product2-mo-plus.png') no-repeat 0 0;
@@ -5066,7 +5110,7 @@ footer.fix {
     }
 
 
-    /* 약국찾기 */
+    /* Ã¬â€¢Â½ÃªÂµÂ­Ã¬Â°Â¾ÃªÂ¸Â° */
     .pharmacy-wrap {
         width: 100%;
         min-height: calc(100% - 450px);
@@ -5140,7 +5184,7 @@ footer.fix {
     }
 
 
-    /* 셀렉트 박스 가운데 정렬 */
+    /* Ã¬â€¦â‚¬Ã«Â â€°Ã­Å Â¸ Ã«Â°â€¢Ã¬Å Â¤ ÃªÂ°â‚¬Ã¬Å¡Â´Ã«ÂÂ° Ã¬Â â€¢Ã«Â Â¬ */
     select {
         text-align: left;
         text-align-last: left;
@@ -5245,7 +5289,7 @@ footer.fix {
     }
 
 
-    /* 팝업 */
+    /* Ã­Å’ÂÃ¬â€”â€¦ */
     .popup .popup-product-wrap {
         position: fixed;
         top: 0;
@@ -5323,7 +5367,7 @@ footer.fix {
         line-height: 120%;
     }
 
-    /* 팝업 */
+    /* Ã­Å’ÂÃ¬â€”â€¦ */
     .popup {
         display: none;
         position: fixed;
@@ -5471,7 +5515,7 @@ footer.fix {
         font-weight: normal;
     }
 
-    /* 미놀 제품 */
+    /* Ã«Â¯Â¸Ã«â€ â‚¬ Ã¬Â Å“Ã­â€™Ë† */
     .popup .popup-product1-wrap {
         position: fixed;
         top: 50%;
@@ -5546,7 +5590,7 @@ footer.fix {
         font-weight: 400;
     }
 
-    /* 팝업 제품 Q&A */
+    /* Ã­Å’ÂÃ¬â€”â€¦ Ã¬Â Å“Ã­â€™Ë† Q&A */
     .popup .popup-product-qna-wrap {
         position: fixed;
         width: 320px;
@@ -5673,7 +5717,7 @@ footer.fix {
         background: url('../img/btn-popup-out-close.png') no-repeat 0 0;
     }
 
-    /* 이용약관 팝업 */
+    /* Ã¬ÂÂ´Ã¬Å¡Â©Ã¬â€¢Â½ÃªÂ´â‚¬ Ã­Å’ÂÃ¬â€”â€¦ */
     .popup-terms-wrap {
         position: fixed;
         top: 50%;
